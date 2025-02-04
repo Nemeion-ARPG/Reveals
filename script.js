@@ -24,11 +24,23 @@ class RandomItemRoller {
     }
 }
 
+
+
 function rollItem() {
     const selectedCategory = document.querySelector('input[name="category"]:checked').value;
+
+    if (!itemLists[selectedCategory]) {
+        console.error("Invalid category selected:", selectedCategory);
+        return;
+    }
+
     const roller = new RandomItemRoller(itemLists[selectedCategory]);
-    const message = categoryMessages[selectedCategory];
-    
+    const message = categoryMessages[selectedCategory] || "Here are your items:";
+
     const rolledItems = roller.rollMultiple(5).join(", ");
-    document.getElementById("result").innerHTML = `<p><strong>${message}</strong></p><p>Rolled items: ${rolledItems}</p><p><strong>All items have been added to your vault!</strong></p>`;
+    document.getElementById("result").innerHTML = `
+        <p><strong>${message}</strong></p>
+        <p>Rolled items: ${rolledItems}</p>
+        <p><strong>All items have been added to your vault!</strong></p>
+    `;
 }
