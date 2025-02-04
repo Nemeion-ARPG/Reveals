@@ -27,13 +27,32 @@ class RandomItemRoller {
     }
 }
 
+function getWeightedRandomMessage(category) {
+    const messages = categoryMessages[category];
+
+    if (!messages || messages.length === 0) return "No message available.";
+
+    // Create weighted message pool
+    let weightedPool = [];
+    messages.forEach(message => {
+        for (let i = 0; i < message.weight; i++) {
+            weightedPool.push(message.text);
+        }
+    });
+
+    // Select a random message from the weighted pool
+    const randomIndex = Math.floor(Math.random() * weightedPool.length);
+    return weightedPool[randomIndex];
+}
+
 function rollItem() {
     const selectedCategory = document.querySelector('input[name="category"]:checked').value;
     const roller = new RandomItemRoller(itemLists[selectedCategory]);
-    const message = categoryMessages[selectedCategory] || ""; // Ensure the predetermined message is used
+    
+    const message = getWeightedRandomMessage(selectedCategory); // Get weighted random message
 
     const rolledItems = roller.rollMultiple(selectedCategory).map(item => `<li>${item}</li>`).join("");
-    
+
     document.getElementById("result").innerHTML = `
         <p><strong>${message}</strong></p>
         <ul style="display: inline-block; text-align: left;">
