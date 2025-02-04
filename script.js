@@ -3,7 +3,7 @@ class RandomItemRoller {
         this.items = items;
     }
 
-    rollMultiple(count) {
+    rollMultiple(category) {
         if (this.items.length === 0) {
             return ["No items available"];
         }
@@ -15,8 +15,11 @@ class RandomItemRoller {
             }
         });
         
+        const guaranteedFive = ["common", "rare", "legendary", "scrolls"].includes(category);
+        const itemCount = guaranteedFive ? 5 : Math.floor(Math.random() * 5) + 1; // 5 for selected categories, 1-5 for others
+        
         const results = [];
-        for (let i = 0; i < count; i++) {
+        for (let i = 0; i < itemCount; i++) {
             const randomIndex = Math.floor(Math.random() * weightedItems.length);
             results.push(weightedItems[randomIndex]);
         }
@@ -24,23 +27,18 @@ class RandomItemRoller {
     }
 }
 
-
-
 function rollItem() {
     const selectedCategory = document.querySelector('input[name="category"]:checked').value;
-
-    if (!itemLists[selectedCategory]) {
-        console.error("Invalid category selected:", selectedCategory);
-        return;
-    }
-
     const roller = new RandomItemRoller(itemLists[selectedCategory]);
     const message = categoryMessages[selectedCategory] || "Here are your items:";
 
-    const rolledItems = roller.rollMultiple(5).join(", ");
+    const rolledItems = roller.rollMultiple(selectedCategory).map(item => `<li>${item}</li>`).join("");
+    
     document.getElementById("result").innerHTML = `
         <p><strong>${message}</strong></p>
-        <p>Rolled items: ${rolledItems}</p>
+        <ul style="display: inline-block; text-align: left;">
+            ${rolledItems}
+        </ul>
         <p><strong>All items have been added to your vault!</strong></p>
     `;
 }

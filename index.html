@@ -8,16 +8,27 @@
     <script defer src="items.js"></script>
     <script defer src="category_messages.js"></script>
     <script defer src="script.js"></script>
-
 </head>
 <body>
     <div class="container">
         <h1>Random Item Roller</h1>
         <div>
-            <input type="radio" name="category" value="weapons" checked> Weapons
-            <input type="radio" name="category" value="armor"> Armor
-            <input type="radio" name="category" value="potions"> Potions
-            <input type="radio" name="category" value="accessories"> Accessories
+            <input type="radio" name="category" value="common" checked> Common
+            <input type="radio" name="category" value="rare"> Rare
+            <input type="radio" name="category" value="legendary"> Legendary
+            <input type="radio" name="category" value="scrolls"> Scrolls
+        </div>
+        <div>
+            <input type="radio" name="category" value="mystical"> Mystical
+            <input type="radio" name="category" value="arcane"> Arcane
+            <input type="radio" name="category" value="divine"> Divine
+            <input type="radio" name="category" value="cursed"> Cursed
+        </div>
+        <div>
+            <input type="radio" name="category" value="ancient"> Ancient
+            <input type="radio" name="category" value="enchanted"> Enchanted
+            <input type="radio" name="category" value="shadow"> Shadow
+            <input type="radio" name="category" value="elemental"> Elemental
         </div>
         <button onclick="rollItem()">Roll an Item</button>
         <div id="result"></div>
