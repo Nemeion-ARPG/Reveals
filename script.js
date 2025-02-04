@@ -30,7 +30,7 @@ class RandomItemRoller {
 function rollItem() {
     const selectedCategory = document.querySelector('input[name="category"]:checked').value;
     const roller = new RandomItemRoller(itemLists[selectedCategory]);
-    const message = categoryMessages[selectedCategory] || "Here are your items:";
+    const message = categoryMessages[selectedCategory] || ""; // Ensure the predetermined message is used
 
     const rolledItems = roller.rollMultiple(selectedCategory).map(item => `<li>${item}</li>`).join("");
     
