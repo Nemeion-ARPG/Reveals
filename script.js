@@ -3,9 +3,9 @@ class RandomItemRoller {
         this.items = items;
     }
 
-    roll() {
+    rollMultiple(count) {
         if (this.items.length === 0) {
-            return "No items available";
+            return ["No items available"];
         }
         
         const weightedItems = [];
@@ -15,13 +15,20 @@ class RandomItemRoller {
             }
         });
         
-        const randomIndex = Math.floor(Math.random() * weightedItems.length);
-        return weightedItems[randomIndex];
+        const results = [];
+        for (let i = 0; i < count; i++) {
+            const randomIndex = Math.floor(Math.random() * weightedItems.length);
+            results.push(weightedItems[randomIndex]);
+        }
+        return results;
     }
 }
 
 function rollItem() {
     const selectedCategory = document.querySelector('input[name="category"]:checked').value;
     const roller = new RandomItemRoller(itemLists[selectedCategory]);
-    document.getElementById("result").textContent = "Rolled item: " + roller.roll();
+    const message = categoryMessages[selectedCategory];
+    
+    const rolledItems = roller.rollMultiple(5).join(", ");
+    document.getElementById("result").innerHTML = `<p><strong>${message}</strong></p><p>Rolled items: ${rolledItems}</p><p><strong>All items have been added to your vault!</strong></p>`;
 }
