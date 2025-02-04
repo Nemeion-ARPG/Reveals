@@ -27,3 +27,8 @@ button {
     cursor: pointer;
     margin-top: 20px;
 }
+.item-image {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}

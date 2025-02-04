@@ -48,16 +48,16 @@ function getWeightedRandomMessage(category) {
 function rollItem() {
     const selectedCategory = document.querySelector('input[name="category"]:checked').value;
     const roller = new RandomItemRoller(itemLists[selectedCategory]);
+    const messages = categoryMessages[selectedCategory];
+    const message = messages ? messages[Math.floor(Math.random() * messages.length)] : "";
+
+    const rolledItems = roller.rollMultiple(selectedCategory)
+        .map(item => `<a href="#"><img src="images/${item.name.toLowerCase().replace(/\s+/g, '-')}.png" class="item-image" alt="${item.name}"></a> `)
+        .join("");
     
-    const message = getWeightedRandomMessage(selectedCategory); // Get weighted random message
-
-    const rolledItems = roller.rollMultiple(selectedCategory).map(item => `<li>${item}</li>`).join("");
-
     document.getElementById("result").innerHTML = `
         <p><strong>${message}</strong></p>
-        <ul style="display: inline-block; text-align: left;">
-            ${rolledItems}
-        </ul>
+        <div>${rolledItems}</div>
         <p><strong>All items have been added to your vault!</strong></p>
     `;
 }
