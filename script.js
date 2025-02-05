@@ -53,7 +53,8 @@ function rollItem() {
     const rolledItems = roller.rollMultiple(selectedCategory).map(item => `<li>${item}</li>`).join("");
     
     document.getElementById("result").innerHTML = `
-        <strong>Purchased!</strong><br>
+        <p><strong>Purchased!</strong></p>
+        <br>
         <p><i>${message}</i></p>
         <ul style="display: flex; text-align: left;">
             ${rolledItems}
