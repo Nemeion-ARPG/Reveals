@@ -26,7 +26,7 @@ class RandomItemRoller {
         }
         return results;
     }
-    
+}    
 
 function rollItem() {
     const selectedCategory = document.querySelector('input[name="category"]:checked').value;
