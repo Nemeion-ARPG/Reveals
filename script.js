@@ -53,8 +53,9 @@ function rollItem() {
     const rolledItems = roller.rollMultiple(selectedCategory).map(item => `<li>${item}</li>`).join("");
     
     document.getElementById("result").innerHTML = `
-        <p><strong>${message}</strong></p>
-        <ul style="display: inline-block; text-align: left;">
+        <strong>Purchased!</strong><br>
+        <p><i>${message}</i></p>
+        <ul style="display: flex; text-align: left;">
             ${rolledItems}
         </ul>
         <p><strong>All items have been added to your vault!</strong></p>
