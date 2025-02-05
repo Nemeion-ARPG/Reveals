@@ -32,3 +32,7 @@ button {
     height: 100px;
     margin: 5px;
 }
+.no-bullets, .no-bullets li {
+    list-style-type:none;
+
+}
