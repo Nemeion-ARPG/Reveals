@@ -48,12 +48,14 @@ function getWeightedRandomMessage(category) {
 function rollItem() {
     const selectedCategory = document.querySelector('input[name="category"]:checked').value;
     const roller = new RandomItemRoller(itemLists[selectedCategory]);
-    const message = getWeightedRandomMessage(selectedCategory); // Get weighted random message
+    
+    const messages = categoryMessages[selectedCategory];
+    const message = messages ? messages[Math.floor(Math.random() * messages.length)] : ""; // Randomly select from available messages
+    
     const rolledItems = roller.rollMultiple(selectedCategory).map(item => `<li>${item}</li>`).join("");
-
+    
     document.getElementById("result").innerHTML = `
-        <strong>Purchased!</strong>
-        <p><i>${message}</i></p>
+        <p><strong>${message}</strong></p>
         <ul style="display: inline-block; text-align: left;">
             ${rolledItems}
         </ul>
