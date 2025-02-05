@@ -4,20 +4,21 @@ class RandomItemRoller {
     }
 
     rollMultiple(category) {
-        if (this.items.length === 0) {
-            return ["No items available"];
+        if (!this.items || this.items.length === 0) {
+            console.error("No items found in category:", category);
+            return [{ name: "No items available", image: "images/no-image.png" }];
         }
-        
+    
         const weightedItems = [];
         this.items.forEach(item => {
             for (let i = 0; i < item.weight; i++) {
                 weightedItems.push(item);
             }
         });
-        
+    
         const guaranteedFive = ["common", "rare", "legendary", "scrolls"].includes(category);
         const itemCount = guaranteedFive ? 5 : Math.floor(Math.random() * 5) + 1;
-        
+    
         const results = [];
         for (let i = 0; i < itemCount; i++) {
             const randomIndex = Math.floor(Math.random() * weightedItems.length);
@@ -25,7 +26,7 @@ class RandomItemRoller {
         }
         return results;
     }
-}
+    
 
 function rollItem() {
     const selectedCategory = document.querySelector('input[name="category"]:checked').value;
