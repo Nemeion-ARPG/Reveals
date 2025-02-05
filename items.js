@@ -1,10 +1,10 @@
 const itemLists = {
     common: [
-        { name: "Sword", image: "images/pouch.png", link: "https://example.com/sword", weight: 10 },
-        { name: "Bow", image: "images/present.png", link: "https://example.com/sword", weight: 10 },
-        { name: "Dagger", image: "images/pouch.png", link: "https://example.com/sword", weight: 15 },
-        { name: "Axe", image: "images/pouch.png", link: "https://example.com/sword", weight: 8 },
-        { name: "Lance", image: "images/present.png", link: "https://example.com/sword", weight: 12 }
+        { name: "Sword", image: "https://www.nemeionarpg.com/files/Images/little-letter.png", link: "https://example.com/sword", weight: 10 },
+        { name: "Bow", image: "https://www.nemeionarpg.com/files/Images/little-letter.png", link: "https://example.com/sword", weight: 10 },
+        { name: "Dagger", image: "https://www.nemeionarpg.com/files/Images/little-letter.png", link: "https://example.com/sword", weight: 15 },
+        { name: "Axe", image: "https://www.nemeionarpg.com/files/Images/little-letter.png", link: "https://example.com/sword", weight: 8 },
+        { name: "Lance", image: "https://www.nemeionarpg.com/files/Images/little-letter.png", link: "https://example.com/sword", weight: 12 }
     ],
     rare: [
         { name: "Helmet", image: "sword.png", link: "https://example.com/sword", weight: 10 },

@@ -51,7 +51,8 @@ function rollItem() {
     const message = getRandomWeightedMessage(selectedCategory);
 
     const rolledItems = roller.rollMultiple(selectedCategory)
-    .map(item => `<a href="${item.link}" target="_blank"><img src="${item.image}" alt="${item.name}" style="width:auto; height:auto;"></a>`).join("");
+    .map(item => `<a href="${item.link}" target="_blank"><img src="${item.image}" alt="${item.name}"></a><br>`)
+    .join("");
     
     document.getElementById("result").innerHTML = `
         <p><strong>Purchased!</strong></p><br>
