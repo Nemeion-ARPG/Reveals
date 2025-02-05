@@ -9,11 +9,13 @@ class RandomItemRoller {
         }
         
         const weightedItems = [];
-        this.items.forEach(item => {
+    this.items.forEach(item => {
+        if (item.image && item.link) { // Ensure items have valid properties
             for (let i = 0; i < item.weight; i++) {
-                weightedItems.push(item.name);
+                weightedItems.push(item);
             }
-        });
+        }
+    });
         
         const guaranteedFive = ["common", "rare", "legendary", "scrolls"].includes(category);
         const itemCount = guaranteedFive ? 5 : Math.floor(Math.random() * 5) + 1; // 5 for selected categories, 1-5 for others
@@ -51,7 +53,7 @@ function rollItem() {
     const message = getRandomWeightedMessage(selectedCategory);
 
     const rolledItems = roller.rollMultiple(selectedCategory)
-    .map(item => `<a href="${item.link}" target="_blank"><img src="${item.image}" alt="${item.name}"></a><br>`)
+    .map(item => `<a href="${item.link}" target="_blank"><img src="${item.image}" alt="${item.name}" style="width:100px; height:auto;"></a><br>`)
     .join("");
     
     document.getElementById("result").innerHTML = `
