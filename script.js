@@ -51,7 +51,7 @@ function rollItem() {
     const message = getRandomWeightedMessage(selectedCategory);
 
     const rolledItems = roller.rollMultiple(selectedCategory).map(item => `<li>${item}</li>`).join("");
-
+    
     document.getElementById("result").innerHTML = `
         <p><strong>${message}</strong></p>
         <ul style="display: inline-block; text-align: left;">
@@ -60,4 +60,3 @@ function rollItem() {
         <p><strong>All items have been added to your vault!</strong></p>
     `;
 }
-
