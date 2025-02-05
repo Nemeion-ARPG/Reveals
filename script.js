@@ -56,9 +56,7 @@ function rollItem() {
         <p><strong>Purchased!</strong></p>
         <br>
         <p><i>${message}</i></p>
-        <ul style="display: flex; text-align: left;">
-            ${rolledItems}
-        </ul>
+        <p><li> ${rolledItems}</li></p>
         <p><strong>All items have been added to your vault!</strong></p>
     `;
 }
