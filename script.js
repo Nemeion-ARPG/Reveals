@@ -17,8 +17,8 @@ class RandomItemRoller {
         }
     });
         
-        const guaranteedFive = ["common", "rare", "legendary", "scrolls"].includes(category);
-        const itemCount = guaranteedFive ? 5 : Math.floor(Math.random() * 5) + 1; // 5 for selected categories, 1-5 for others
+        const guaranteedFive = ["shipment", "breeding", "decor", "backgrounds"].includes(category);
+        const itemCount = guaranteedFive ? 5 : Math.floor(Math.random() * 3) + 1; // 5 for selected categories, 1-3 for others
         
         const results = [];
         for (let i = 0; i < itemCount; i++) {
