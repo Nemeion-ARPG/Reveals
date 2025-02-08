@@ -267,7 +267,7 @@ const itemLists = {
         { name: "Yellow Crystal", image: "images/YellowCrystal.png", link: "https://www.deviantart.com/nemeionadmin/art/Yellow-Crystal-893785808", weight: 6 }
     ],
     backgrounds: [
-        { name: "Fields of Love", image: "images/Fieldsoflove.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Fields-of-Love-1154191432", weight: 2 },
+        { name: "Fields of Love", image: "images/Fieldsoflove.jpg", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Fields-of-Love-1154191432", weight: 2 },
         { name: "Sailing Seas", image: "images/SailingSeas.png", link: "https://www.deviantart.com/nemeionadmin/art/Exclusive-Background-Sailing-Seas-1047716790", weight: 4 },
         { name: "Winter Forest", image: "images/WinterForest.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Winter-Forest-998692114", weight: 4 },
         { name: "Haunted Cage", image: "images/HauntedCage.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Haunted-Cage-861788466", weight: 6 },
@@ -400,7 +400,7 @@ const itemLists = {
         { name: "Brute Potion", image: "images/BrutePotion.png", link: "https://www.deviantart.com/nemeionadmin/art/Brute-Potion-893641009", weight: 5 },
         { name: "Sunflower", image: "images/Sunflower.png", link: "https://www.deviantart.com/nemeionadmin/art/Sunflower-990294836", weight: 10 },
         { name: "Unicorn Meat", image: "images/UnicornMeat.png", link: "https://www.deviantart.com/nemeionadmin/art/Unicorn-Meat-1037691492", weight: 2 },
-        { name: "Fields of Love", image: "images/Fieldsoflove.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Fields-of-Love-1154191432", weight: 7 },
+        { name: "Fields of Love", image: "images/Fieldsoflove.jpg", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Fields-of-Love-1154191432", weight: 7 },
         { name: "Sloth Charlie", image: "images/SlothCharlie.png", link: "https://www.deviantart.com/nemeionadmin/art/Sloth-Charlie-1154181335", weight: 4 }
     ],
     smallingredient: [
@@ -638,7 +638,7 @@ const itemLists = {
         { name: "Kopis Sword", image: "images/Kopis.png", link: "https://www.deviantart.com/nemeionadmin/art/Kopis-Sword-862975315", weight: 4 },
         { name: "Large Sack of Coins", image: "images/LargeCoins.png", link: "https://www.deviantart.com/nemeionadmin/art/Large-Sack-of-Coins-893645563", weight: 3 },
         { name: "Legendary Scroll", image: "images/LScroll.png", link: "https://www.deviantart.com/nemeionadmin/art/Legendary-Scroll-893645688", weight: 1 },
-        { name: "Loaded Dice", image: "images/LoaadedDice.png", link: "https://www.deviantart.com/nemeionadmin/art/Loaded-Dice-1000413511", weight: 3 },
+        { name: "Loaded Dice", image: "images/LoadedDice.png", link: "https://www.deviantart.com/nemeionadmin/art/Loaded-Dice-1000413511", weight: 3 },
         { name: "Lost Brute Cub", image: "images/LostBrute.png", link: "https://www.deviantart.com/nemeionadmin/art/Lost-Brute-Cub-893645778", weight: 6 },
         { name: "Lost Regal Cub", image: "images/LostRegal.png", link: "https://www.deviantart.com/nemeionadmin/art/Lost-Regal-Cub-893645840", weight: 5 },
         { name: "Lynx Tan", image: "images/LynxTan.png", link: "https://www.deviantart.com/nemeionadmin/art/Lynx-Tan-893646219", weight: 2 },
