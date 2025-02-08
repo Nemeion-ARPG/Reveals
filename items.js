@@ -144,7 +144,7 @@ const itemLists = {
         { name: "Leather Leg Wraps", image: "images/LeatherBracers.png", link: "https://www.deviantart.com/nemeionadmin/art/Leather-Leg-Wraps-862975421", weight: 3 },
         { name: "Leather Strips", image: "images/LeatherStrips.png", link: "https://www.deviantart.com/nemeionadmin/art/Leather-Strips-869942752", weight: 7 },
         { name: "Legendary Scroll", image: "images/LScroll.png", link: "https://www.deviantart.com/nemeionadmin/art/Legendary-Scroll-893645688", weight: 1 },
-        { name: "Loaded Dice", image: "images/LoaadedDice.png", link: "https://www.deviantart.com/nemeionadmin/art/Loaded-Dice-1000413511", weight: 3 },
+        { name: "Loaded Dice", image: "images/LoadedDice.png", link: "https://www.deviantart.com/nemeionadmin/art/Loaded-Dice-1000413511", weight: 3 },
         { name: "Lost Brute Cub", image: "images/LostBrute.png", link: "https://www.deviantart.com/nemeionadmin/art/Lost-Brute-Cub-893645778", weight: 6 },
         { name: "Lost Regal Cub", image: "images/LostRegal.png", link: "https://www.deviantart.com/nemeionadmin/art/Lost-Regal-Cub-893645840", weight: 5 },
         { name: "Lost Dwarf Cub", image: "images/LostDwarf.png", link: " ", weight: 4 },
