@@ -267,7 +267,7 @@ const itemLists = {
         { name: "Yellow Crystal", image: "images/YellowCrystal.png", link: "https://www.deviantart.com/nemeionadmin/art/Yellow-Crystal-893785808", weight: 6 }
     ],
     backgrounds: [
-        { name: "Fields of Love", image: "images/FieldsOfLove.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Fields-of-Love-1154191432", weight: 2 },
+        { name: "Fields of Love", image: "images/LoveField.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Fields-of-Love-1154191432", weight: 2 },
         { name: "Sailing Seas", image: "images/SailingSeas.png", link: "https://www.deviantart.com/nemeionadmin/art/Exclusive-Background-Sailing-Seas-1047716790", weight: 4 },
         { name: "Winter Forest", image: "images/WinterForest.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Winter-Forest-998692114", weight: 4 },
         { name: "Haunted Cage", image: "images/HauntedCage.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Haunted-Cage-861788466", weight: 6 },
@@ -400,7 +400,7 @@ const itemLists = {
         { name: "Brute Potion", image: "images/BrutePotion.png", link: "https://www.deviantart.com/nemeionadmin/art/Brute-Potion-893641009", weight: 5 },
         { name: "Sunflower", image: "images/Sunflower.png", link: "https://www.deviantart.com/nemeionadmin/art/Sunflower-990294836", weight: 10 },
         { name: "Unicorn Meat", image: "images/UnicornMeat.png", link: "https://www.deviantart.com/nemeionadmin/art/Unicorn-Meat-1037691492", weight: 2 },
-        { name: "Fields of Love", image: "images/FieldsOfLove.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Fields-of-Love-1154191432", weight: 7 },
+        { name: "Fields of Love", image: "images/LoveField.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Fields-of-Love-1154191432", weight: 7 },
         { name: "Sloth Charlie", image: "images/SlothCharlie.png", link: "https://www.deviantart.com/nemeionadmin/art/Sloth-Charlie-1154181335", weight: 4 }
     ],
     smallingredient: [
