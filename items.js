@@ -322,11 +322,11 @@ const itemLists = {
         { name: "Legendary Scroll", image: "images/LScroll.png", link: "https://www.deviantart.com/nemeionadmin/art/Legendary-Scroll-893645688", weight: 1 }
     ],
     seasonoflove: [
-        { name: "Sloth Bron", image: "images/SlothBron.png", link: "https://www.deviantart.com/nemeionadmin/art/Sloth-Bron-1154187029", weight: 2 },
-        { name: "Sloth Toby", image: "images/SlothToby.png", link: "https://www.deviantart.com/nemeionadmin/art/Sloth-Toby-1154184952", weight: 2 },
-        { name: "Sloth Petals", image: "images/SlothPetals.png", link: "https://www.deviantart.com/nemeionadmin/art/Sloth-Petals-1154184152", weight: 2 },
-        { name: "Sloth Figgy", image: "images/SlothFiggy.png", link: "https://www.deviantart.com/nemeionadmin/art/Sloth-Figgy-1154183493", weight: 2 },
-        { name: "Star Ruby", image: "images/StarRuby.png", link: "https://www.deviantart.com/nemeionadmin/art/Star-Ruby-869944706", weight: 2 },
+        { name: "Sloth Bron", image: "images/SlothBron.png", link: "https://www.deviantart.com/nemeionadmin/art/Sloth-Bron-1154187029", weight: 1 },
+        { name: "Sloth Toby", image: "images/SlothToby.png", link: "https://www.deviantart.com/nemeionadmin/art/Sloth-Toby-1154184952", weight: 1 },
+        { name: "Sloth Petals", image: "images/SlothPetals.png", link: "https://www.deviantart.com/nemeionadmin/art/Sloth-Petals-1154184152", weight: 1 },
+        { name: "Sloth Figgy", image: "images/SlothFiggy.png", link: "https://www.deviantart.com/nemeionadmin/art/Sloth-Figgy-1154183493", weight: 1 },
+        { name: "Star Ruby", image: "images/StarRuby.png", link: "https://www.deviantart.com/nemeionadmin/art/Star-Ruby-869944706", weight: 1 },
         { name: "Grapes", image: "images/Grapes.png", link: "https://www.deviantart.com/nemeionadmin/art/Grapes-893644172", weight: 9 },
         { name: "Stone Idol", image: "images/StoneIdol.png", link: "https://www.deviantart.com/nemeionadmin/art/Stone-Idol-862974823", weight: 6 },
         { name: "Aphrodite's Lament", image: "images/AphroLament.png", link: "https://www.deviantart.com/nemeionadmin/art/Aphrodite-s-Lament-1048409662", weight: 4 },
