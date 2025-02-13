@@ -57,7 +57,6 @@ function rollItem() {
     .join("");
     
     document.getElementById("result").innerHTML = `
-        <p><strong>Purchased!</strong></p><br>
         <p><i>${message}</i></p>
         ${rolledItems}<p><strong>All items have been added to your vault!</strong></p>
     `;

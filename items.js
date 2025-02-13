@@ -274,6 +274,7 @@ const itemLists = {
         { name: "Coal", image: "images/Coal.png", link: "https://www.deviantart.com/nemeionadmin/art/Coal-893641673", weight: 10 },
         { name: "Snowball", image: "images/Snowball.png", link: "https://www.deviantart.com/nemeionadmin/art/Snowball-998662090", weight: 10 },
         { name: "Missive", image: "images/Missive.png", link: "https://www.deviantart.com/nemeionadmin/art/Missive-990301175", weight: 6 },
+        { name: "Winter Forest", image: "images/WinterForest.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Winter-Forest-998692114", weight: 4 },
         { name: "Rare Fabrics", image: "images/RareFabrics.png", link: "https://www.deviantart.com/nemeionadmin/art/Rare-Fabrics-990300520", weight: 8 },
         { name: "Pouch of Prosperity", image: "images/Prosperity.png", link: "https://www.deviantart.com/nemeionadmin/art/Rare-Fabrics-990300520", weight: 2 },
         { name: "Weasel White", image: "images/WeaselWhite.png", link: "https://www.deviantart.com/nemeionadmin/art/Weasel-White-893785561", weight: 2 },
@@ -322,10 +323,10 @@ const itemLists = {
         { name: "Legendary Scroll", image: "images/LScroll.png", link: "https://www.deviantart.com/nemeionadmin/art/Legendary-Scroll-893645688", weight: 1 }
     ],
     seasonoflove: [
-        { name: "Sloth Bron", image: "images/SlothBron.png", link: "https://www.deviantart.com/nemeionadmin/art/Sloth-Bron-1154187029", weight: 1 },
-        { name: "Sloth Toby", image: "images/SlothToby.png", link: "https://www.deviantart.com/nemeionadmin/art/Sloth-Toby-1154184952", weight: 1 },
-        { name: "Sloth Petals", image: "images/SlothPetals.png", link: "https://www.deviantart.com/nemeionadmin/art/Sloth-Petals-1154184152", weight: 1 },
-        { name: "Sloth Figgy", image: "images/SlothFiggy.png", link: "https://www.deviantart.com/nemeionadmin/art/Sloth-Figgy-1154183493", weight: 1 },
+        { name: "Sloth Bron", image: "images/SlothBron.png", link: "https://www.deviantart.com/nemeionadmin/art/Sloth-Bron-1154187029", weight: 2 },
+        { name: "Sloth Toby", image: "images/SlothToby.png", link: "https://www.deviantart.com/nemeionadmin/art/Sloth-Toby-1154184952", weight: 2 },
+        { name: "Sloth Petals", image: "images/SlothPetals.png", link: "https://www.deviantart.com/nemeionadmin/art/Sloth-Petals-1154184152", weight: 2 },
+        { name: "Sloth Figgy", image: "images/SlothFiggy.png", link: "https://www.deviantart.com/nemeionadmin/art/Sloth-Figgy-1154183493", weight: 2 },
         { name: "Star Ruby", image: "images/StarRuby.png", link: "https://www.deviantart.com/nemeionadmin/art/Star-Ruby-869944706", weight: 1 },
         { name: "Grapes", image: "images/Grapes.png", link: "https://www.deviantart.com/nemeionadmin/art/Grapes-893644172", weight: 9 },
         { name: "Stone Idol", image: "images/StoneIdol.png", link: "https://www.deviantart.com/nemeionadmin/art/Stone-Idol-862974823", weight: 6 },
