@@ -686,5 +686,24 @@ const itemLists = {
         { name: "Small Brown Pelt", image: "images/SmallBrown.png", link: "https://www.deviantart.com/nemeionadmin/art/Small-Brown-Pelt-893784263", weight: 7 },
         { name: "Small Black Pelt", image: "images/SmallBlack.png", link: "https://www.deviantart.com/nemeionadmin/art/Small-Black-Pelt-893784191", weight: 7 },
         { name: "Void Amulet", weight: 8 }
-    ]
+    ],
+    prankparade: [
+        { name: "Bag of Gags", image: "images/Bagofgags.png", link: "https://www.deviantart.com/nemeionadmin/art/Bag-of-Gags-1178225699", weight: 50 },
+        { name: "Doubloons", image: "images/Doubloons.png", link: "https://www.deviantart.com/nemeionadmin/art/Fool-s-Doubloon-1037696568", weight: 90 },
+        { name: "Festival Grounds Background", image: "images/FestivalGroundsBG.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Festival-Grounds-1178244929", weight: 15 },
+        { name: "Sailing Seas Background", image: "images/SailingSeas.png", link: "https://www.deviantart.com/nemeionadmin/art/Exclusive-Background-Sailing-Seas-1047716790", weight: 15 },
+        { name: "Feathered Fool", image: "images/FeatheredFool.png", link: "https://www.deviantart.com/nemeionadmin/art/Feathered-Fool-White-1106831419", weight: 5 },
+        { name: "Large Sack of Coins", image: "images/LargeCoins.png", link: "https://www.deviantart.com/nemeionadmin/art/Large-Sack-of-Coins-893645563", weight: 70 },
+        { name: "Warpaints", image: "images/Warpaints.png", link: "https://www.deviantart.com/nemeionadmin/art/Warpaints-893785368", weight: 30 },
+        { name: "Caesar's Dice", image: "images/CaesarsDice.png", link: "https://www.deviantart.com/nemeionadmin/art/The-Caesar-s-dice-795623961", weight: 5 },
+        { name: "Jack in the Box", image: "images/JackBox.png", link: "https://www.deviantart.com/nemeionadmin/art/Jack-in-the-Box-1178235560", weight: 2 },
+        { name: "Zesty Soup", image: "images/ZestySoup.png", link: "https://www.deviantart.com/nemeionadmin/art/Zesty-Soup-1178930757", weight: 2 },
+        { name: "Meaty Soup", image: "images/MeatySoup.png", link: "https://www.deviantart.com/nemeionadmin/art/Meaty-Soup-1178928074", weight: 2 },
+        { name: "Questionable Soup", image: "images/QuestionableSoup.png", link: "https://www.deviantart.com/nemeionadmin/art/Questionable-Soup-1178927697", weight: 2 },
+        { name: "Hearty Soup", image: "images/HeartySoup.png", link: "https://www.deviantart.com/nemeionadmin/art/Hearty-Soup-1178925574", weight: 2 },
+        { name: "Frightening Soup", image: "images/FrighteningSoup.png", link: "https://www.deviantart.com/nemeionadmin/art/Frightening-Soup-1178924014", weight: 2 },
+        { name: "Fragrant Soup", image: "images/FragrantSoup.png", link: "https://www.deviantart.com/nemeionadmin/art/Fragrant-Soup-1178922930", weight: 2 },
+        { name: "Feathers", image: "images/Feathers.png", link: "https://www.deviantart.com/nemeionadmin/art/Feathers-862973997", weight: 50 }
+    ],
 };
+
