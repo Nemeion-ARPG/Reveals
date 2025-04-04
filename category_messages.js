@@ -21,27 +21,25 @@ const categoryMessages = {
         { text: "Your x1 Festive Present has revealed the following:", weight: 2 }
     ],
     metalsupplies: [
-        { text: "A cursed relic has chosen you!", weight: 5 },
-        { text: "Dark energy surrounds this item!", weight: 3 },
-        { text: "You feel a sinister presence as you pick up this item!", weight: 2 }
+        { text: "Your x1 Metal Supplies has revealed the following:", weight: 5 },
     ],
     mysterycrate: [
-        { text: "An artifact of the ancients is revealed!", weight: 5 },
-        { text: "This item carries the wisdom of an ancient civilization!", weight: 3 },
-        { text: "Dust and mystery surround this ancient relic!", weight: 2 }
+        { text: "Your x1 Metal Supplies has revealed the following:", weight: 5 },
     ],
     mysterypotion: [
-        { text: "An enchanted item shimmers in your hands!", weight: 5 },
-        { text: "You feel the magic coursing through this enchanted relic!", weight: 3 },
-        { text: "This item hums with magical energy!", weight: 2 }
+        { text: "Guess what? Chicken butt.", weight: 5 },
     ],
     scrolls: [
-        { text: "A shadowy force whispers of this item!", weight: 5 },
-        { text: "Darkness swirls around this artifact!", weight: 3 },
-        { text: "You can barely see the shadows coalescing into this item!", weight: 2 }
+        { text: "Your x1 Scroll has revealed the following:", weight: 5 },
     ],
     seasonoflove: [
         { text: "Compassion is a vital quality that fosters understanding, kindness, and connection among individuals. It allows us to recognize and alleviate the suffering of others, creating a more empathetic and supportive society. When we practice compassion, we not only uplift those in need but also cultivate inner peace and fulfillment.", weight: 5 }
+    ],
+    prankparade: [
+        { text: "[NAME] # spent the day planning and plotting, and finally managed to pull off a fabulous prank! Gales of laughter, whooping and cheering erupted around them as the festival goers celebrated their success, accompanied by a thunder of applause from Caesar, himself! To reward their success, your Nemeion is presented with:", weight: 1 },
+        { text: "[NAME] # roared with laughter at their own joke! The throng of revelers paused to clap and cheer them on, led by Caesar himself, who bestows your Nemeion with a gift for such an exheuberant display! ", weight: 2 },
+        { text: "[NAME] # clapped their paws together when they suddenly felt something wet slap them across the face! It seems Vesilios couldn't resist joining in on the fun! He laughs and flees as the cream from the pie slides off of your Nemeion's face, but he leaves behind a little something to show that he's a good sport!", weight: 3 }
+        
     ],
     smallingredient: [
         { text: "Your x1 Small Ingredients Box has revealed the following:", weight: 2 }
