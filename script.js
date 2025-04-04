@@ -61,3 +61,18 @@ function rollItem() {
         ${rolledItems}<p><strong>All items have been added to your vault!</strong></p>
     `;
 }
+
+function toggleDropdown() {
+    const dropdown = document.querySelector('.dropdown');
+    dropdown.classList.toggle('show');
+  }
+  
+  document.addEventListener('click', function (e) {
+    const dropdown = document.querySelector('.dropdown');
+    const toggle = document.querySelector('.dropdown-toggle');
+  
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('show');
+    }
+  });
+  
