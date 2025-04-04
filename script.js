@@ -58,7 +58,7 @@ function rollItem() {
     
     document.getElementById("result").innerHTML = `
         <p><i>${message}</i></p>
-        ${rolledItems}
+        ${rolledItems}<p><strong>All items have been added to your vault!</strong></p>
     `;
 }
 
