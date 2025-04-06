@@ -703,7 +703,7 @@ const itemLists = {
         { name: "Sinister Soup", image: "images/SinisterSoup.png", link: "https://www.deviantart.com/nemeionadmin/art/Sinister-Soup-1179741547", weight: 5 },
         { name: "Savory Soup", image: "images/SavorySoup.png", link: "https://www.deviantart.com/nemeionadmin/art/Savory-Soup-1179750727", weight: 10 },
         { name: "Fishy Soup", image: "images/FishySoup.png", link: "https://www.deviantart.com/nemeionadmin/art/Fishy-Soup-1179751588", weight: 10 },
-        { name: "Appalling Soup", image: "images/ApallingSoup.png", link: "https://www.deviantart.com/nemeionadmin/art/Appalling-Soup-1179756715", weight: 10 },
+        { name: "Appalling Soup", image: "images/AppallingSoup.png", link: "https://www.deviantart.com/nemeionadmin/art/Appalling-Soup-1179756715", weight: 10 },
         { name: "Feathers", image: "images/Feathers.png", link: "https://www.deviantart.com/nemeionadmin/art/Feathers-862973997", weight: 50 }
     ],
 };
