@@ -216,6 +216,28 @@ const itemLists = {
         { name: "Haunted Cage", image: "images/HauntedCage.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Haunted-Cage-861788466", weight: 6 },
         { name: "Spooky Forest", image: "images/SpookyForest.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Spooky-Forest-Halloween-2020-861002050", weight: 6 }
     ],
+    harvestfestival: [
+        { name: "Corn", image: "images/Corn.png", link: "https://www.deviantart.com/nemeionadmin/art/Corn-1167334952", weight: 95 },
+        { name: "Bountiful Harvest", image: "images/Bountifulharvest.png", link: "https://www.deviantart.com/nemeionadmin/art/Bountiful-Harvest-1225138578", weight: 35 },
+        { name: "Pumpkin Patch", image: "images/Pumpkinpatch.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Pumpkin-Patch-1225141158", weight: 25 },
+        { name: "Pumpkin", image: "images/Pumpkin.png", link: "https://www.deviantart.com/nemeionadmin/art/Pumpkin-893647256", weight: 75 },
+        { name: "Bell Pepper", image: "images/Bellpepper.png", link: "https://www.deviantart.com/nemeionadmin/art/Bell-Pepper-1167336607", weight: 80 },
+        { name: "Carrot", image: "images/Carrot.png", link: "https://www.deviantart.com/nemeionadmin/art/Carrot-1167342943", weight: 80 },
+        { name: "Figs", image: "images/Figs.png", link: "https://www.deviantart.com/nemeionadmin/art/Figs-893643273", weight: 60 },
+        { name: "Berry Tart", image: "images/Berrytart.png", link: "https://www.deviantart.com/nemeionadmin/art/Rustic-Berry-Tart-1225106431", weight: 5 },
+        { name: "Pear Cake", image: "images/Pearcake.png", link: "https://www.deviantart.com/nemeionadmin/art/Athenian-Pear-Cake-1225103429", weight: 5 },
+        { name: "Torta de Pistachio", image: "images/TortaPis.png", link: "https://www.deviantart.com/nemeionadmin/art/Torta-de-Pistachio-1225107002", weight: 3 },
+        { name: "Savory Ribs", image: "images/Savoryribs.png", link: "https://www.deviantart.com/nemeionadmin/art/Savory-Ribs-1225108019", weight: 2 },
+        { name: "Hardboiled Eggs", image: "images/Hardeggs.png", link: "https://www.deviantart.com/nemeionadmin/art/Hardboiled-Eggs-1225109071", weight: 6 },
+        { name: "Peacock", image: "images/Peacock.png", link: "https://www.deviantart.com/nemeionadmin/art/Perfectly-Roasted-Peacock-1225110252", weight: 2 },
+        { name: "Visciole", image: "images/Visciole.png", link: "https://www.deviantart.com/nemeionadmin/art/Torta-di-Visciole-1225111678", weight: 2 },
+        { name: "Beef Souvlaki", image: "images/Beefsou.png", link: "https://www.deviantart.com/nemeionadmin/art/Beef-Souvlaki-1225113188", weight: 2 },
+        { name: "Fish Souvlaki", image: "images/Fishsou.png", link: "https://www.deviantart.com/nemeionadmin/art/Fish-Souvlaki-1225135463", weight: 2 },
+        { name: "Chicken Souvlaki", image: "images/Chickensou.png", link: "https://www.deviantart.com/nemeionadmin/art/Chicken-Souvlaki-1225136749", weight: 2 },
+        { name: "Pork Souvlaki", image: "images/Porksou.png", link: "https://www.deviantart.com/nemeionadmin/art/Pork-Souvlaki-1225137658", weight: 2 },
+        { name: "Junk Mail", image: "images/Junkmail.png", link: "https://www.deviantart.com/nemeionadmin/art/Junk-Mail-1167801625", weight: 50 },
+        { name: "Pear", image: "images/Pear.png", link: "https://www.deviantart.com/nemeionadmin/art/Pear-893647071", weight: 75 }
+    ],
     teethbag: [
         { name: "Your x1 Bag of Teeth has revealed x1 Teeth!", weight: 10 },
         { name: "Your x2 Bag of Teeth has revealed x1 Teeth!", weight: 9 },

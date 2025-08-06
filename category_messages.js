@@ -20,6 +20,9 @@ const categoryMessages = {
     present: [
         { text: "Your x1 Festive Present has revealed the following:", weight: 2 }
     ],
+    harvestfestival: [
+        { text: "For their participation, they have received the following:", weight: 2 }
+    ],
     metalsupplies: [
         { text: "Your x1 Metal Supplies has revealed the following:", weight: 5 },
     ],

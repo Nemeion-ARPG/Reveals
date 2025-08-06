@@ -69,7 +69,7 @@ function toggleDropdown() {
   
   document.addEventListener('click', function (e) {
     const dropdown = document.querySelector('.dropdown');
-    const toggle = document.querySelector('.dropdown-toggle');
+    const toggle = document.querySelector('.dropdown-toggle');0
   
     if (!dropdown.contains(e.target)) {
       dropdown.classList.remove('show');
