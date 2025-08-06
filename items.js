@@ -217,7 +217,7 @@ const itemLists = {
         { name: "Spooky Forest", image: "images/SpookyForest.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Spooky-Forest-Halloween-2020-861002050", weight: 6 }
     ],
     harvestfestival: [
-        { name: "Corn", image: "images/Corn.png", link: "https://www.deviantart.com/nemeionadmin/art/Corn-1167334952", weight: 95 },
+        { name: "Corn", image: "images/Corn.png", link: "https://www.deviantart.com/nemeionadmin/art/Corn-1167334952", weight: 99 },
         { name: "Bountiful Harvest", image: "images/Bountifulharvest.png", link: "https://www.deviantart.com/nemeionadmin/art/Bountiful-Harvest-1225138578", weight: 35 },
         { name: "Pumpkin Patch", image: "images/Pumpkinpatch.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Pumpkin-Patch-1225141158", weight: 25 },
         { name: "Pumpkin", image: "images/Pumpkin.png", link: "https://www.deviantart.com/nemeionadmin/art/Pumpkin-893647256", weight: 75 },
