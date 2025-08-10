@@ -39,7 +39,7 @@ class RandomItemRoller {
             }
         });
         
-        const festivalItemCount = Math.floor(Math.random() * 2) + 1; // 1-2 items
+        const festivalItemCount = Math.floor(Math.random() * 3) + 1; // 1-3 items
         for (let i = 0; i < festivalItemCount && harvestfestivalItems.length > 0; i++) {
             const festivalIndex = Math.floor(Math.random() * harvestfestivalItems.length);
             results.push(harvestfestivalItems[festivalIndex]);

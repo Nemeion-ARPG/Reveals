@@ -223,7 +223,7 @@ const itemLists = {
         { name: "Corn", image: "images/Corn.png", link: "https://www.deviantart.com/nemeionadmin/art/Corn-1167334952", weight: 99 },
         { name: "Corn", image: "images/Corn.png", link: "https://www.deviantart.com/nemeionadmin/art/Corn-1167334952", weight: 99 },
         { name: "Bountiful Harvest", image: "images/Bountifulharvest.png", link: "https://www.deviantart.com/nemeionadmin/art/Bountiful-Harvest-1225138578", weight: 35 },
-        { name: "Pumpkin Patch", image: "images/Pumpkinpatch.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Pumpkin-Patch-1225141158", weight: 25 },
+        { name: "Pumpkin Patch", image: "images/Pumpkinpatch.png", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Pumpkin-Patch-1225141158", weight: 35 },
         { name: "Pumpkin", image: "images/Pumpkin.png", link: "https://www.deviantart.com/nemeionadmin/art/Pumpkin-893647256", weight: 75 },
         { name: "Bell Pepper", image: "images/Bellpepper.png", link: "https://www.deviantart.com/nemeionadmin/art/Bell-Pepper-1167336607", weight: 80 },
         { name: "Carrot", image: "images/Carrot.png", link: "https://www.deviantart.com/nemeionadmin/art/Carrot-1167342943", weight: 80 },
