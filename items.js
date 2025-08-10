@@ -242,6 +242,10 @@ const itemLists = {
         { name: "Junk Mail", image: "images/Junkmail.png", link: "https://www.deviantart.com/nemeionadmin/art/Junk-Mail-1167801625", weight: 50 },
         { name: "Pear", image: "images/Pear.png", link: "https://www.deviantart.com/nemeionadmin/art/Pear-893647071", weight: 75 }
     ],
+    harvestcorn: [
+        { name: "Corn", image: "images/Corn.png", link: "https://www.deviantart.com/nemeionadmin/art/Corn-1167334952", weight: 99 },
+        { name: "Corn", image: "images/Corn.png", link: "https://www.deviantart.com/nemeionadmin/art/Corn-1167334952", weight: 99 }
+    ],
     teethbag: [
         { name: "Your x1 Bag of Teeth has revealed x1 Teeth!", weight: 10 },
         { name: "Your x2 Bag of Teeth has revealed x1 Teeth!", weight: 9 },
