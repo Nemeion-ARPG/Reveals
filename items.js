@@ -586,6 +586,8 @@ const itemLists = {
         { name: "Knife", link: "https://www.deviantart.com/nemeionadmin/art/Knife-1172538481", weight: 90 },
         { name: "Chisel", link: "https://www.deviantart.com/nemeionadmin/art/Chisel-1172537617", weight: 40 },
         { name: "Hammer", link: "https://www.deviantart.com/nemeionadmin/art/Hammer-893644447", weight: 70 },
+        { name: "Gladiator Pendant", link: "https://www.deviantart.com/nemeionadmin/art/Gladiator-Pendant-1187473579", weight: 90 },
+        { name: "Explorer's Map", link: "https://www.deviantart.com/nemeionadmin/art/Explorer-s-Map-1162882786", weight: 90 },
         { name: "Arrows", link: "https://www.deviantart.com/nemeionadmin/art/Arrows-862972674", weight: 70 }
     ],
 };
