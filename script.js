@@ -57,9 +57,11 @@ if (category === "harvestfestival") {
         }
     });
         
-    const guaranteedFive = ["shipment", "breeding", "decor", "backgrounds"].includes(category);
-    const guaranteedOne = ["mysterycrate"].includes(category);
-    const oneTwoItems = ["trunk"].includes(category);
+    // Convert category to lowercase for consistent comparison
+    const lowerCategory = category.toLowerCase();
+    const guaranteedFive = ["shipment", "breeding", "decor", "backgrounds"].includes(lowerCategory);
+    const guaranteedOne = ["mysterycrate"].includes(lowerCategory);
+    const oneTwoItems = ["trunk"].includes(lowerCategory);
     const itemCount = guaranteedFive ? 5 : (guaranteedOne ? 1 : (oneTwoItems ? Math.floor(Math.random() * 2) + 1 : Math.floor(Math.random() * 3) + 1));
     
     const results = [];
