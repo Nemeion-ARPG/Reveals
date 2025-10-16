@@ -59,7 +59,8 @@ if (category === "harvestfestival") {
         
     const guaranteedFive = ["shipment", "breeding", "decor", "backgrounds"].includes(category);
     const guaranteedOne = ["mysterycrate"].includes(category);
-    const itemCount = guaranteedFive ? 5 : (guaranteedOne ? 1 : Math.floor(Math.random() * 3) + 1);
+    const oneTwoItems = ["trunk"].includes(category);
+    const itemCount = guaranteedFive ? 5 : (guaranteedOne ? 1 : (oneTwoItems ? Math.floor(Math.random() * 2) + 1 : Math.floor(Math.random() * 3) + 1));
     
     const results = [];
     for (let i = 0; i < itemCount; i++) {
