@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('https://www.nemeionarpg.com/files/Images/Desert-BG.png') no-repeat center center fixed;
+    background: url('https://www.nemeionarpg.com/files/Images/Cage-BG.png') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
 }
@@ -68,8 +68,31 @@ button {
 .dropdown-menu label {
   display: block;
   margin-bottom: 5px;
+  text-align: left;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
+.dropdown-menu input[type="radio"] {
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 .dropdown.show .dropdown-menu {
   display: block;
+}
+
+.copy-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.2s;
+}
+
+.copy-button:hover {
+  background-color: #e0e0e0;
 }

@@ -27,7 +27,7 @@ const categoryMessages = {
         { text: "Your x1 Metal Supplies has revealed the following:", weight: 5 },
     ],
     mysterycrate: [
-        { text: "Your x1 Metal Supplies has revealed the following:", weight: 5 },
+        { text: "The crate groans as you pry it open, the hinges shrieking like something alive. A chill seeps out, curling through the air like the breath of the dead. Within, the trinkets glimmer faintly—masks that leer, lanterns that flicker with trapped souls, and a faint music box tune that shouldn’t still be playing. The melody halts as you reach inside, leaving behind only silence… and the feeling that something unseen has just stepped closer. Your x1 Mysterious Crate has revealed the following:", weight: 5 },
     ],
     mysterypotion: [
         { text: "Guess what? Chicken butt.", weight: 5 },
