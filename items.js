@@ -221,21 +221,7 @@ const itemLists = {
         { name: "Corn", image: "images/Corn.png", link: "https://www.deviantart.com/nemeionadmin/art/Corn-1167334952", weight: 99 }
     ],
     teethbag: [
-        { name: "Your x1 Bag of Teeth has revealed x1 Teeth!", weight: 10 },
-        { name: "Your x2 Bag of Teeth has revealed x1 Teeth!", weight: 9 },
-        { name: "Your x3 Bag of Teeth has revealed x1 Teeth!", weight: 8 },
-        { name: "Your x4 Bag of Teeth has revealed x1 Teeth!", weight: 7 },
-        { name: "Your x5 Bag of Teeth has revealed x1 Teeth!", weight: 6 },
-        { name: "Your x6 Bag of Teeth has revealed x1 Teeth!", weight: 5 },
-        { name: "Your x7 Bag of Teeth has revealed x1 Teeth!", weight: 4 },
-        { name: "Your x8 Bag of Teeth has revealed x1 Teeth!", weight: 3 },
-        { name: "Your x9 Bag of Teeth has revealed x1 Teeth!", weight: 2 },
-        { name: "Your x10 Bag of Teeth has revealed x1 Teeth!", weight: 1 },
-        { name: "Your x11 Bag of Teeth has revealed x1 Teeth!", weight: 1 },
-        { name: "Your x12 Bag of Teeth has revealed x1 Teeth!", weight: 1 },
-        { name: "Your x13 Bag of Teeth has revealed x1 Teeth!", weight: 1 },
-        { name: "Your x14 Bag of Teeth has revealed x1 Teeth!", weight: 1 },
-        { name: "Your x15 Bag of Teeth has revealed x1 Teeth!", weight: 1 }
+        { name: "Teeth", link: "https://www.deviantart.com/nemeionadmin/art/Teeth-857006414", weight: 1 }
     ],
     breeding: [
         { name: "Dreadful Drought", image: "images/DreadfulDrought.png", link: "https://www.deviantart.com/nemeionadmin/art/Dreadful-Drought-1048414234", weight: 3 },
@@ -321,11 +307,11 @@ const itemLists = {
         { name: "Cryptic Curse Trait", link: "https://www.deviantart.com/nemeionadmin/art/Cryptic-Curse-990293796", weight: 15 },
     ],
     mysterypotion: [
-        { name: "Enchanted Necklace", weight: 10 },
-        { name: "Mystic Scroll", weight: 18 },
-        { name: "Magic Boots", weight: 12 },
-        { name: "Eldritch Ring", weight: 15 },
-        { name: "Warding Charm", weight: 10 }
+        { name: "Enchanted Necklace", link: "#", weight: 10 },
+        { name: "Mystic Scroll", link: "#", weight: 18 },
+        { name: "Magic Boots", link: "#", weight: 12 },
+        { name: "Eldritch Ring", link: "#", weight: 15 },
+        { name: "Warding Charm", link: "#", weight: 10 }
     ],
     scrolls: [
         { name: "Common Scroll", image: "images/CScroll.png", link: "https://www.deviantart.com/nemeionadmin/art/Common-Scroll-893641746", weight: 10 },

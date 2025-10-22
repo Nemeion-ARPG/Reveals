@@ -11,7 +11,7 @@ class RandomItemRoller {
     let itemsToUse = this.items;
     
     // Special handling for Harvestfestival category
-if (category === "harvestfestival") {
+    if (category === "harvestfestival") {
     const results = [];
     
     // Always get 2 items from harvestcorn
@@ -62,7 +62,14 @@ if (category === "harvestfestival") {
     const guaranteedFive = ["shipment", "breeding", "decor", "backgrounds"].includes(lowerCategory);
     const guaranteedOne = ["mysterycrate"].includes(lowerCategory);
     const oneTwoItems = ["trunk"].includes(lowerCategory);
-    const itemCount = guaranteedFive ? 5 : (guaranteedOne ? 1 : (oneTwoItems ? Math.floor(Math.random() * 2) + 1 : Math.floor(Math.random() * 3) + 1));
+    const threeToFiveItems = ["largeingredient"].includes(lowerCategory);
+    const oneToFifteen = ["teethbag"].includes(lowerCategory);
+    const itemCount = guaranteedFive ? 5 : 
+        (guaranteedOne ? 1 : 
+        (oneTwoItems ? Math.floor(Math.random() * 2) + 1 : 
+        (threeToFiveItems ? Math.floor(Math.random() * 3) + 3 :
+        (oneToFifteen ? Math.floor(Math.random() * 15) + 1 :
+        Math.floor(Math.random() * 3) + 1))));
     
     const results = [];
     for (let i = 0; i < itemCount; i++) {
@@ -93,7 +100,14 @@ function getRandomWeightedMessage(category) {
 
 function rollItem() {
     const selectedCategory = document.querySelector('input[name="category"]:checked').value;
-    const roller = new RandomItemRoller(itemLists[selectedCategory]);
+    let itemList = itemLists[selectedCategory];
+    
+    // Special handling for Large Ingredient Box
+    if (selectedCategory === "largeingredient") {
+        itemList = itemLists["smallingredient"];
+    }
+    
+    const roller = new RandomItemRoller(itemList);
     const message = getRandomWeightedMessage(selectedCategory);
 
     // Get all rolled items first
