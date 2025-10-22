@@ -64,6 +64,17 @@ class RandomItemRoller {
     const oneTwoItems = ["trunk"].includes(lowerCategory);
     const threeToFiveItems = ["largeingredient"].includes(lowerCategory);
     const oneToFifteen = ["teethbag"].includes(lowerCategory);
+
+    // Handle coin sacks
+    if (lowerCategory === "smallsackofcoins") {
+        const coinAmount = Math.floor(Math.random() * 1001) + 1000; // 1000 to 2000
+        return [{ name: "Coins", link: "#", quantity: coinAmount }];
+    }
+    if (lowerCategory === "largesackofcoins") {
+        const coinAmount = Math.floor(Math.random() * 3001) + 2000; // 2000 to 5000
+        return [{ name: "Coins", link: "#", quantity: coinAmount }];
+    }
+
     const itemCount = guaranteedFive ? 5 : 
         (guaranteedOne ? 1 : 
         (oneTwoItems ? Math.floor(Math.random() * 2) + 1 : 
@@ -113,10 +124,16 @@ function rollItem() {
     // Get all rolled items first
     const rolledResults = roller.rollMultiple(selectedCategory);
 
-    // Count duplicate items
+    // Count duplicate items and handle special quantity items
     const itemCounts = {};
     rolledResults.forEach(item => {
-        itemCounts[item.name] = (itemCounts[item.name] || 0) + 1;
+        if (item.quantity) {
+            // For items with specific quantities (like coins)
+            itemCounts[item.name] = item.quantity;
+        } else {
+            // For regular items with duplicate counting
+            itemCounts[item.name] = (itemCounts[item.name] || 0) + 1;
+        }
     });
 
     // Convert to array of unique items with counts

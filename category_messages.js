@@ -6,7 +6,7 @@ const categoryMessages = {
         { text: "You have revealed the following backgrounds:", weight: 3 }
     ],
     teethbag: [
-        { text: "The small burlap pouch feels heavier than it should. When you loosen the tie, a soft rattle comes from inside, the sound of tiny bones clicking together. The teeth are all different shapes and sizes, some cracked, while others are still shining as if freshly pulled. A cold shiver runs through you when you notice a few that look almost human. Your x1 Bag of Teeth has revealed:.", weight: 2 }
+        { text: "The small burlap pouch feels heavier than it should. When you loosen the tie, a soft rattle comes from inside, the sound of tiny bones clicking together. The teeth are all different shapes and sizes, some cracked, while others are still shining as if freshly pulled. A cold shiver runs through you when you notice a few that look almost human. Your x1 Bag of Teeth has revealed:", weight: 2 }
     ],
     breeding: [
         { text: "You have revealed the following breeding items:", weight: 3 }
@@ -46,5 +46,11 @@ const categoryMessages = {
     ],
     largeingredient: [
         { text: "The large wooden crate holds an assortment of ingredients preserved with care. Glass jars shimmer with powdered minerals and oils drawn from sacred groves. The weight of knowledge lingers over them, as if every herb and crystal still remembers the hands of those who once worked the old magic. Your x1 Large Ingredient Box has revealed the following:", weight: 2 }
+    ],
+    smallsackofcoins: [
+        { text: "The small leather sack jingles softly as you loosen its drawstring. Inside, a modest collection of coins catches the light. Your Small Sack of Coins reveals:", weight: 1 }
+    ],
+    largesackofcoins: [
+        { text: "The substantial weight of the large leather sack speaks of its contents before you even open it. As you loosen the thick rope binding it shut, the unmistakable gleam of coins catches your eye. Your Large Sack of Coins reveals:", weight: 1 }
     ]
 };
