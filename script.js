@@ -288,6 +288,19 @@ function rollItem() {
         }
     });
 
+    // Add bonus items for special categories
+    if (selectedCategory === "bagofgags") {
+        // Add 1-5 doubloons
+        const doubloonCount = Math.floor(Math.random() * 5) + 1;
+        itemCounts["Doubloon"] = doubloonCount;
+        rolledResults.push({ name: "Doubloon", link: "https://www.deviantart.com/nemeionadmin/art/Fool-s-Doubloon-1037696568" });
+    } else if (selectedCategory === "bountifulharvest") {
+        // Add 1-5 corn
+        const cornCount = Math.floor(Math.random() * 5) + 1;
+        itemCounts["Corn"] = cornCount;
+        rolledResults.push({ name: "Corn", link: "https://www.deviantart.com/nemeionadmin/art/Corn-1167334952" });
+    }
+
     // Convert to array of unique items with counts
     const rolledItems = Object.entries(itemCounts)
         .map(([name, count]) => {
@@ -312,9 +325,14 @@ function toggleDropdown() {
   document.addEventListener('click', function (e) {
     const dropdown = document.querySelector('.dropdown');
     const toggle = document.querySelector('.dropdown-toggle');
+    const eggsDropdown = document.getElementById('eggsDropdownMenu');
   
     if (!dropdown.contains(e.target)) {
       dropdown.classList.remove('show');
+    }
+
+    if (eggsDropdown && !eggsDropdown.contains(e.target) && !e.target.matches('.eggs-dropdown-toggle')) {
+      eggsDropdown.parentElement.classList.remove('show');
     }
   });
 
