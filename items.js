@@ -274,11 +274,14 @@ const itemLists = {
     ],
     metalsupplies: [
         { name: "Anvil", image: "images/Anvil.png", link: "https://www.deviantart.com/nemeionadmin/art/Anvil-893639615", weight: 1 },
+        { name: "Knife", link: "https://www.deviantart.com/nemeionadmin/art/Knife-1172538481", weight: 90 },
+        { name: "Chisel", link: "https://www.deviantart.com/nemeionadmin/art/Chisel-1172537617", weight: 40 },
         { name: "Chroma Ingot", image: "images/ChromaIngot.png", link: "https://www.deviantart.com/nemeionadmin/art/Chroma-Ingot-990297997", weight: 2 },
         { name: "Chunk of Copper", image: "images/CopperChunk.png", link: "https://www.deviantart.com/nemeionadmin/art/Chunk-of-Copper-893641267", weight: 5 },
         { name: "Iron Ingot", image: "images/IronIngot.png", link: "https://www.deviantart.com/nemeionadmin/art/Iron-Ingot-893645225", weight: 4 },
         { name: "Gold Ingot", image: "images/GoldIngot.png", link: "https://www.deviantart.com/nemeionadmin/art/Gold-Ingot-893644122", weight: 6 },
         { name: "Wire", image: "images/Wire.png", link: "https://www.deviantart.com/nemeionadmin/art/Wire-869945702", weight: 5 },
+        { name: "Chalice", image: "images/Chalice.png", link: "https://www.deviantart.com/nemeionadmin/art/Chalice-893641224", weight: 5 },
         { name: "Hammer", image: "images/Hammer.png", link: "https://www.deviantart.com/nemeionadmin/art/Hammer-893644447", weight: 4 },
         { name: "Nails", image: "images/Nails.png", link: "https://www.deviantart.com/nemeionadmin/art/Nails-937796990", weight: 3 },
         { name: "Chunk of Gold", image: "images/GoldChunk.png", link: "https://www.deviantart.com/nemeionadmin/art/Chunk-of-Gold-893641299", weight: 4 },
@@ -918,6 +921,17 @@ const itemLists = {
         { name: "Athenian Pear Cake", link: "https://www.deviantart.com/nemeionadmin/art/Athenian-Pear-Cake-1225103429", weight: 20 },
         { name: "Rustic Berry Tart", link: "https://www.deviantart.com/nemeionadmin/art/Rustic-Berry-Tart-1225106431", weight: 20 },
         { name: "Torta di Visciole", link: "https://www.deviantart.com/nemeionadmin/art/Torta-di-Visciole-1225111678", weight: 4 }
+    ],
+    legendarycompanioncache: [
+        { name: "Mermaid Companion", link: "https://www.deviantart.com/nemeionadmin/art/Mermaid-Wrasse-1162832824", weight: 50 },
+        { name: "Unicorn Companion", link: "https://www.deviantart.com/nemeionadmin/art/Unicorn-Flaxen-1162623787", weight: 10 },
+        { name: "Wisp Companion", link: "https://www.deviantart.com/nemeionadmin/art/Wisp-Void-1162485445", weight: 50 },
+        { name: "Sphinx Companion", link: "https://www.deviantart.com/nemeionadmin/art/Sphinx-Pharaoh-1162471396", weight: 50 },
+        { name: "Wyrm Companion", link: "https://www.deviantart.com/nemeionadmin/art/Wyrm-Black-1162471677", weight: 50 },
+        { name: "Crystalline Familiar", link: "https://www.deviantart.com/nemeionadmin/art/Crystalline-Familiar-Citrine-1161338463", weight: 20 },
+        { name: "Cerberus Companion", link: "https://www.deviantart.com/nemeionadmin/art/Cerberus-Black-1048406109", weight: 50 },
+        { name: "Chimera Companion", link: "https://www.deviantart.com/nemeionadmin/art/Chimera-Striped-1048404825", weight: 50 },
+        { name: "Pegasus Companion", link: "https://www.deviantart.com/nemeionadmin/art/Pegasus-Black-1048403355", weight: 50 }
     ],
 };
 

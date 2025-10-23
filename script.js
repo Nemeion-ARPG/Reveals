@@ -61,12 +61,12 @@ class RandomItemRoller {
     const lowerCategory = category.toLowerCase();
     // Add egg type categories to guaranteedOne
     const eggTypes = ["curious", "spotted", "hefty", "peculiar", "strange", "unusual", "quivering", "frogspawn"];
-    const guaranteedFive = ["shipment", "breeding", "decor", "backgrounds", "scrolls"].includes(lowerCategory);
-    const guaranteedOne = ["mysterycrate", "foolsmask"].includes(lowerCategory) || eggTypes.includes(lowerCategory);
-    const oneTwoItems = ["trunk", "present"].includes(lowerCategory);
+    const guaranteedFive = ["shipment", "breeding", "decor", "backgrounds"].includes(lowerCategory);
+    const guaranteedOne = ["mysterycrate", "foolsmask", "legendarycompanioncache"].includes(lowerCategory) || eggTypes.includes(lowerCategory);
+    const oneTwoItems = ["present"].includes(lowerCategory);
     const threeToFiveItems = ["decorationcoffer", "largeingredient"].includes(lowerCategory);
     const oneToFifteen = ["teethbag"].includes(lowerCategory);
-    const oneToThree = ["bountifulharvest", "bagofgags", "supplycrate", "pouchofherbs", "sunkenchest", "treasurechest", "metalsupplies", "smallingredient"].includes(lowerCategory);
+    const oneToThree = ["scrolls", "trunk", "bountifulharvest", "bagofgags", "supplycrate", "pouchofherbs", "sunkenchest", "treasurechest", "metalsupplies", "smallingredient"].includes(lowerCategory);
     const twoToFive = [];
 
     // Handle coin sacks

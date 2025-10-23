@@ -62,6 +62,9 @@ const categoryMessages = {
     trunk: [
         { text: "The trunk opens with a hollow creak, releasing the scent of oil and leather. Inside lies an assortment of well-kept equipment, each piece worn by time yet sturdy in purpose. The craftsmanship bears the quiet influence of Hephaestus, humble tools made to endure both war and wilderness. Your x1 Wooden Trunk has revealed the following:", weight: 2 }
     ],
+    legendarycompanioncache: [
+        { text: "The cache opens slowly, releasing a deep, rhythmic sound like a distant heartbeat. A faint glow spills out, carrying the scent of earth and rain. Whatever rests within is no ordinary companion but something touched by the divine. Your Legendary Companion Cache reveals:", weight: 2 }
+    ],
     largeingredient: [
         { text: "The large wooden crate holds an assortment of ingredients preserved with care. Glass jars shimmer with powdered minerals and oils drawn from sacred groves. The weight of knowledge lingers over them, as if every herb and crystal still remembers the hands of those who once worked the old magic. Your x1 Large Ingredient Box has revealed the following:", weight: 2 }
     ],
