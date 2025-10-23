@@ -30,6 +30,11 @@ button {
     cursor: pointer;
     margin-top: 20px;
 }
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
 .list {
     display: flex;
     flex-direction: column;
@@ -80,6 +85,29 @@ button {
 
 .dropdown.show .dropdown-menu {
   display: block;
+}
+
+#selectedCategory {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+}
+
+#selectedEggType {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+}
+
+#eggsSubcategory {
+  margin-top: 15px;
+}
+
+#eggsSubcategory .dropdown-toggle {
+  background-color: #f8f8f8;
+  color: #444;
 }
 
 .copy-button {

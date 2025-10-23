@@ -29,6 +29,24 @@ const categoryMessages = {
     mysterypotion: [
         { text: "Guess what? Chicken butt.", weight: 5 },
     ],
+    foolsmask: [
+        { text: "You put on the Feast of Fools Mask hoping to attract a feathery friend and are immediately greeted by an equally fashionable fool! You have received:", weight: 5 },
+    ],
+    supplycrate: [
+        { text: "The crate opens with a heavy crack of wood, the scent of oil and rope drifting into the air. Inside rests an assortment of supplies—tools, rations, and spare materials packed with care. Each piece bears the mark of long travel, yet all remain ready for use. You have received the following:", weight: 5 },
+    ],
+    pouchofherbs: [
+        { text: "The pouch opens with a soft rustle, releasing the sharp scent of crushed leaves and sun-dried stems. The aroma carries notes of pine, sage, and smoke, a reminder of the wild hills where such herbs still grow untamed. You have received the following:", weight: 5 },
+    ],
+    map: [
+        { text: "You study your x1 Map beneath the fading light, comparing its markings to the ridges and streams around you. Each turn brings a new sign of progress—a carved stone here, a weathered post there. The promise of buried treasure feels closer now, tangible and real. You have found the following:", weight: 5 },
+    ],
+    bagofgags: [
+        { text: "You rummage around in your x1 Bag of Gags, groping around for your new prize! It takes an unusually long time to find your gift, as if the bag is... simply too big inside, but eventually you manage to pull out:", weight: 5 },
+    ],
+    bountifulharvest: [
+        { text: "You rummage through the x1 Bountiful Harvest, looking for tasty rewards. As you look through the basket brimming with the fruits and vegetables of the seasons labors you find yours is full of:", weight: 5 },
+    ],
     scrolls: [
         { text: "Your x1 Scroll has revealed the following:", weight: 5 },
     ],
