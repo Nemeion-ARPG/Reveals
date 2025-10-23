@@ -59,12 +59,15 @@ class RandomItemRoller {
         
     // Convert category to lowercase for consistent comparison
     const lowerCategory = category.toLowerCase();
-    const guaranteedFive = ["shipment", "breeding", "decor", "backgrounds"].includes(lowerCategory);
-    const guaranteedOne = ["mysterycrate", "foolsmask"].includes(lowerCategory);
-    const oneTwoItems = ["trunk"].includes(lowerCategory);
-    const threeToFiveItems = ["largeingredient"].includes(lowerCategory);
+    // Add egg type categories to guaranteedOne
+    const eggTypes = ["curious", "spotted", "hefty", "peculiar", "strange", "unusual", "quivering", "frogspawn"];
+    const guaranteedFive = ["shipment", "breeding", "decor", "backgrounds", "scrolls"].includes(lowerCategory);
+    const guaranteedOne = ["mysterycrate", "foolsmask"].includes(lowerCategory) || eggTypes.includes(lowerCategory);
+    const oneTwoItems = ["trunk", "present"].includes(lowerCategory);
+    const threeToFiveItems = ["decorationcoffer", "largeingredient"].includes(lowerCategory);
     const oneToFifteen = ["teethbag"].includes(lowerCategory);
-    const oneToThree = ["bountifulharvest", "bagofgags", "supplycrate", "pouchofherbs"].includes(lowerCategory);
+    const oneToThree = ["bountifulharvest", "bagofgags", "supplycrate", "pouchofherbs", "sunkenchest", "treasurechest", "metalsupplies", "smallingredient"].includes(lowerCategory);
+    const twoToFive = [];
 
     // Handle coin sacks
     if (lowerCategory === "smallsackofcoins") {
@@ -169,8 +172,8 @@ function rollItem() {
     const selectedCategory = document.querySelector('input[name="category"]:checked').value;
     let itemList = itemLists[selectedCategory];
     
-    // Special handling for Large Ingredient Box
-    if (selectedCategory === "largeingredient") {
+    // Special handling for Ingredient Boxes
+    if (selectedCategory === "largeingredient" || selectedCategory === "smallingredient") {
         itemList = itemLists["smallingredient"];
     }
 
@@ -245,7 +248,7 @@ function rollItem() {
         itemList = itemLists[selectedEggType];
         // Force single item for egg hatches
         const roller = new RandomItemRoller(itemList);
-        const rolledResults = [roller.rollMultiple(selectedCategory)[0]]; // Get only one item
+        const rolledResults = [roller.rollMultiple(selectedEggType)[0]]; // Get only one item from egg type category
         
         // Create custom success message for egg hatching
         const message = `The ${selectedEggType} egg begins to crack and shake...`;
