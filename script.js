@@ -64,8 +64,7 @@ class RandomItemRoller {
     const oneTwoItems = ["trunk"].includes(lowerCategory);
     const threeToFiveItems = ["largeingredient"].includes(lowerCategory);
     const oneToFifteen = ["teethbag"].includes(lowerCategory);
-    const oneToThree = ["bountifulharvest", "bagofgags", "pouchofherbs"].includes(lowerCategory);
-    const twoToFive = ["supplycrate"].includes(lowerCategory);
+    const oneToThree = ["bountifulharvest", "bagofgags", "supplycrate", "pouchofherbs"].includes(lowerCategory);
 
     // Handle coin sacks
     if (lowerCategory === "smallsackofcoins") {
