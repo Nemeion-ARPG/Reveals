@@ -5,7 +5,11 @@ function handleMysteriousPotion() {
     
     // Get a random response using the weighting system
     const weightedArray = [];
-    mysteriousPotionResponses.forEach(response => {
+    if (!window.mysteriousPotionResponses) {
+        console.error('mysteriousPotionResponses not found');
+        return 'Error: Could not load responses. Please refresh the page.';
+    }
+    window.mysteriousPotionResponses.forEach(response => {
         for (let i = 0; i < response.weight; i++) {
             weightedArray.push(response);
         }
