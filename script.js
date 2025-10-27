@@ -170,6 +170,13 @@ function getGagMessage() {
 
 function rollItem() {
     const selectedCategory = document.querySelector('input[name="category"]:checked').value;
+    
+    // Handle Mysterious Potion in the events roller
+    if (selectedCategory === 'mysteriouspotion') {
+        document.getElementById("result").innerHTML = handleMysteriousPotion();
+        return;
+    }
+    
     let itemList = itemLists[selectedCategory];
     
     // Special handling for Ingredient Boxes
@@ -345,12 +352,20 @@ document.querySelectorAll('input[name="category"]').forEach(radio => {
         // Show/hide egg subcategory based on selection
         const eggsSubcategory = document.getElementById('eggsSubcategory');
         const selectedEggType = document.getElementById('selectedEggType');
+        const potionDescriptionContainer = document.getElementById('potionDescriptionContainer');
+        
         if (this.value === 'eggs') {
             eggsSubcategory.style.display = 'inline-block';
             selectedEggType.style.display = 'block';
+            potionDescriptionContainer.style.display = 'none';
+        } else if (this.value === 'mysteriouspotion') {
+            eggsSubcategory.style.display = 'none';
+            selectedEggType.style.display = 'none';
+            potionDescriptionContainer.style.display = 'block';
         } else {
             eggsSubcategory.style.display = 'none';
             selectedEggType.style.display = 'none';
+            potionDescriptionContainer.style.display = 'none';
         }
     });
 });
@@ -424,4 +439,51 @@ function copyResults() {
         button.style.display = '';
     }
 }
-  
+
+// Handle version switching
+function switchVersion(version) {
+    // Get both buttons
+    const mainButton = document.getElementById('mainVersion');
+    const altButton = document.getElementById('altVersion');
+    
+    // Update active states
+    if (version === 'main') {
+        mainButton.classList.add('active');
+        altButton.classList.remove('active');
+    } else {
+        mainButton.classList.remove('active');
+        altButton.classList.add('active');
+    }
+
+    // Store the current version in localStorage
+    localStorage.setItem('currentVersion', version);
+    
+    // Reload the appropriate version
+    if (version === 'alt') {
+        window.location.href = 'alt.html';
+    } else {
+        window.location.href = 'index.html';
+    }
+}
+
+// Check version and initialize page on load
+document.addEventListener('DOMContentLoaded', function() {
+    const currentVersion = localStorage.getItem('currentVersion') || 'main';
+    const mainButton = document.getElementById('mainVersion');
+    const altButton = document.getElementById('altVersion');
+    
+    if (currentVersion === 'main') {
+        mainButton.classList.add('active');
+        altButton.classList.remove('active');
+    } else {
+        mainButton.classList.remove('active');
+        altButton.classList.add('active');
+    }
+
+    // Get the first radio button and update the selected category text
+    const firstRadio = document.querySelector('input[type="radio"]');
+    if (firstRadio) {
+        const label = firstRadio.parentElement.textContent.trim();
+        document.getElementById('selectedCategory').textContent = 'Currently Selected: ' + label;
+    }
+});

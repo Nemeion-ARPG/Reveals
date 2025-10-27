@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Item Roller - Alt</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="items.js"></script>
+    <script defer src="category_messages.js"></script>
+    <script defer src="feral_options.js"></script>
+    <script defer src="Mysterious_Potion.js"></script>
+    <script defer src="events.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="version-switcher">
+        <button id="mainVersion" class="version-button" onclick="switchVersion('main')">Reveals Roller</button>
+        <button id="altVersion" class="version-button active" onclick="switchVersion('alt')">Special Events Roller</button>
+    </div>
+    <div class="container">
+    <h1>Special Events Roller</h1>
+    <div id="selectedCategory">Currently Selected: Mysterious Potion</div>
+    <div class="dropdown">
+        <button class="dropdown-toggle" onclick="toggleDropdown()">Category Selection</button>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <label><input type="radio" name="category" value="mysteriouspotion" checked> Mysterious Potion</label>
+        </div></div>
+        
+        <div id="potionDescriptionContainer" style="margin: 10px 0;">
+            <input type="text" id="potionDescription" placeholder="Enter Nemeion Name and ID" style="width: 100%; padding: 8px; margin: 5px 0;">
+        </div>
+        
+        <div class="button-group">
+            <button onclick="rollItem()">Roll Results</button>
+            <button onclick="resetRoller()">Reset</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    </div>
+</body>
+</html>
