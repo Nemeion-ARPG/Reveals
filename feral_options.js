@@ -1,4 +1,5 @@
 // List of feral options for mysterious potion encounters
+
 const feralOptions = [
     {
         description: "Octavia WF2",

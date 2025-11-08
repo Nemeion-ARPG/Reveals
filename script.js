@@ -245,7 +245,7 @@ function rollItem() {
                 <p><i>You attempt to hatch the egg, but...</i></p>
                 <br>
                 ${getUnhatchedEggMessage(selectedEggType)}<br>
-                <p><strong>The egg has been removed your vault.</strong></p>
+                <p><strong>The egg has been removed from your vault.</strong></p>
                 <button onclick="copyResults()" class="copy-button">Copy Results</button>
             `;
             return;

@@ -1,4 +1,5 @@
 function handleMysteriousPotion() {
+    
     // Get the potion description if provided
     const potionDescription = document.getElementById('potionDescription').value;
     const descriptionText = potionDescription ? `<b>${potionDescription}</b> ` : '';
@@ -25,10 +26,12 @@ function handleMysteriousPotion() {
         
         // If this response requires random selection(s)
         if (selectedResponse.randomChoice && selectedResponse.items.length > 1) {
+
             // Single random choice
             const randomItemIndex = Math.floor(Math.random() * selectedResponse.items.length);
             itemsToShow = [selectedResponse.items[randomItemIndex]];
         } else if (selectedResponse.randomMultipleChoice && selectedResponse.items.length > 0) {
+
             // Multiple random choices
             const count = Math.floor(Math.random() * (selectedResponse.itemCount.max - selectedResponse.itemCount.min + 1)) + selectedResponse.itemCount.min;
             const availableItems = [...selectedResponse.items];
@@ -53,16 +56,20 @@ function handleMysteriousPotion() {
             // If quantity is 125, generate a random number between 1 and 5
             if (quantity === 125) {
                 quantity = Math.floor(Math.random() * 5) + 1;
-            }
+            } 
+            // If quantity is 123, generate a random number between 1 and 3
             else if (quantity === 123) {
                 quantity = Math.floor(Math.random() * 3) + 1;
             }
+            // If quantity is 122, generate a random number between 1 and 2
             else if (quantity === 122) {
                 quantity = Math.floor(Math.random() * 2) + 1;
             }
+            // If quantity is 1000210000, generate a random number between 1,000 and 10,000
             else if (quantity === 1000210000) {
                 quantity = Math.floor(Math.random() * 10000) + 1000;
             }
+            // If quantity is 50022500, generate a random number between 500 and 2,500
             else if (quantity === 50022500) {
                 quantity = Math.floor(Math.random() * 2500) + 500;
             }
