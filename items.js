@@ -308,6 +308,7 @@ const itemLists = {
         { name: "Haunted Cage Background", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Haunted-Cage-861788466", weight: 50 },
         { name: "Blistering Bile Blessing", link: "https://www.deviantart.com/nemeionadmin/art/Blistering-Bile-1137290581", weight: 10 },
         { name: "Cryptic Curse Trait", link: "https://www.deviantart.com/nemeionadmin/art/Cryptic-Curse-990293796", weight: 15 },
+        { name: "The Hallow Gate Background", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-The-Hollow-Gate-1258837014", weight: 50 }
     ],
     mysterypotion: [
         { name: "Enchanted Necklace", link: "#", weight: 10 },
