@@ -63,7 +63,7 @@ class RandomItemRoller {
     const eggTypes = ["curious", "spotted", "hefty", "peculiar", "strange", "unusual", "quivering", "frogspawn"];
     const guaranteedFive = ["shipment", "breeding", "decor", "backgrounds"].includes(lowerCategory);
     const guaranteedOne = ["mysterycrate", "foolsmask", "legendarycompanioncache"].includes(lowerCategory) || eggTypes.includes(lowerCategory);
-    const oneTwoItems = ["present"].includes(lowerCategory);
+    const oneTwoItems = ["present", "naughtypresent", "elegantpresent"].includes(lowerCategory);
     const threeToFiveItems = ["decorationcoffer", "largeingredient"].includes(lowerCategory);
     const oneToFifteen = ["teethbag"].includes(lowerCategory);
     const oneToThree = ["scrolls", "trunk", "bountifulharvest", "bagofgags", "supplycrate", "pouchofherbs", "sunkenchest", "treasurechest", "metalsupplies", "smallingredient"].includes(lowerCategory);

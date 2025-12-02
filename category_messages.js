@@ -18,7 +18,13 @@ const categoryMessages = {
         { text: "You ease the latch open and the coffer bursts into a soft sparkle, scattering motes of gold dust across your paws. Inside rests a delicate collection of charms and baubles — each one humming with quiet joy, eager to brighten your space. Your x1 Decoration Coffer has revealed the following:", weight: 2 }
     ],
     present: [
-        { text: "The present opens with a quiet rustle, the scent of myrrh and olive oil drifting into the air. Inside lie offerings wrapped in sun-warmed cloth, humble gifts meant to honor the turning of the year, when mortals and gods alike share in the feast of Saturn’s peace. Your x1 Festive Present has revealed the following:", weight: 2 }
+        { text: "The present opens with a quiet rustle, the scent of myrrh and olive oil drifting into the air. Inside lie offerings wrapped in sun-warmed cloth, humble gifts meant to honor the turning of the year, when mortals and gods alike share in the feast of Saturn's peace. Your x1 Festive Present has revealed the following:", weight: 2 }
+    ],
+    naughtypresent: [
+        { text: "The present rattles ominously as you shake it, the sound of mischief barely contained. When you tear open the dark wrapping, a faint scent of sulfur and smoke rises from within. Your x1 Naughty Present has revealed the following:", weight: 2 }
+    ],
+    elegantpresent: [
+        { text: "The present gleams beneath ribbons of silk and silver, its weight promising something of true worth. As you carefully unwrap the immaculate packaging, the scent of fine oils and precious metals fills the air. These are gifts befitting nobilitym treasures chosen with care and bound by the favor of the gods. Your x1 Elegant Present has revealed the following:", weight: 2 }
     ],
     metalsupplies: [
         { text: "The crate opens with a metallic groan, revealing stacks of forged bars and rivets gleaming in the half-light. They carry the promise of creation — the bones of armor, the heart of machines, the veins of a thousand yet-to-be-made relics. Your x1 Metal Supplies has revealed the following:", weight: 5 },
