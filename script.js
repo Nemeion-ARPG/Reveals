@@ -468,6 +468,12 @@ function resetRoller() {
     // Determine which container is currently active
     const mainContainer = document.getElementById('mainContainer');
     const altContainer = document.getElementById('altContainer');
+    
+    if (!mainContainer || !altContainer) {
+        console.error('Cannot find main or alt container');
+        return;
+    }
+    
     const isMainActive = !mainContainer.classList.contains('hidden');
     
     // Clear the result for the active container
@@ -486,7 +492,7 @@ function resetRoller() {
             }
         }
         
-        // Hide main container specific elements
+        // Hide main container specific elements with null checks
         const eggsSubcategory = document.getElementById('eggsSubcategory');
         const selectedEggType = document.getElementById('selectedEggType');
         const imperialChampionOptions = document.getElementById('imperialChampionOptions');
