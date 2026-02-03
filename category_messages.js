@@ -54,7 +54,10 @@ const categoryMessages = {
         { text: "You rummage through the x1 Bountiful Harvest, looking for tasty rewards. As you look through the basket brimming with the fruits and vegetables of the seasons labors you find yours is full of:", weight: 5 },
     ],
     scrolls: [
-        { text: "Your x1 Scroll has revealed the following:", weight: 5 },
+        { text: "As the Pouch of Prosperity is opened, neatly rolled scrolls spill forth. Within these pages lie opportunities earned through fortune, foresight, and a touch of luck. Your x1 Pouch of Prosperity has revealed the following:", weight: 5 },
+    ],
+    scrollinabottle: [
+        { text: "You unseal the glass bottle and slide out the tightly rolled parchment within. The ink shimmers faintly as it unfurls, revealing a single scroll from within. Your x1 Scroll in a Bottle has revealed the following:", weight: 5 },
     ],
     smallingredient: [
         { text: "The box opens to reveal small packets bound in waxed paper and twine. A soft aroma of rosemary and smoke curls upward, mingling with the cool scent of stone. These are offerings once favored by healers and priests, the raw essence of ritual and remedy alike. Your x1 Small Ingredients Box has revealed the following:", weight: 2 }

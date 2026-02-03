@@ -62,7 +62,7 @@ class RandomItemRoller {
     // Add egg type categories to guaranteedOne
     const eggTypes = ["curious", "spotted", "hefty", "peculiar", "strange", "unusual", "quivering", "frogspawn"];
     const guaranteedFive = ["shipment", "breeding", "decor", "backgrounds"].includes(lowerCategory);
-    const guaranteedOne = ["mysterycrate", "foolsmask", "legendarycompanioncache", "imperialchampioncache", "backgroundcache"].includes(lowerCategory) || eggTypes.includes(lowerCategory);
+    const guaranteedOne = ["mysterycrate", "foolsmask", "legendarycompanioncache", "imperialchampioncache", "backgroundcache", "scrollinabottle"].includes(lowerCategory) || eggTypes.includes(lowerCategory);
     const oneTwoItems = ["present", "naughtypresent", "elegantpresent", "valentinebox"].includes(lowerCategory);
     const twoToThree = ["lostmissivepouch", "eventrewardcache"].includes(lowerCategory);
     const threeToFiveItems = ["decorationcoffer", "largeingredient"].includes(lowerCategory);

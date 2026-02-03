@@ -1129,3 +1129,5 @@ const itemLists = {
     ]
 };
 
+itemLists.scrollinabottle = itemLists.scrolls;
+
