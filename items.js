@@ -1003,7 +1003,7 @@ const itemLists = {
     ],
     eventrewardcache: [
         { name: "Spectral Bonehound Companion", link: "https://www.deviantart.com/nemeionadmin/art/Spectral-Bonehound-Blue-Fire-859828478", weight: 20 },
-        { name: "Fiendish Battle Wounds", link: "https://www.deviantart.com/nemeionadmin/art/Fiendish-Battle-Wounds-893643237", weight: 50 },
+        { name: "Fiendish Battle Wounds", link: "https://www.deviantart.com/nemeionadmin/art/Fiendish-Battle-Wounds-893643237", weight: 5 },
         { name: "Feathered Fool Companion", link: "https://www.deviantart.com/nemeionadmin/art/Feathered-Fool-Brown-911908073", weight: 20 },
         { name: "Jack in the Box", link: "https://www.deviantart.com/nemeionadmin/art/Jack-in-the-Box-1178235560", weight: 1 },
         { name: "Feather on a Stick", link: "https://www.deviantart.com/nemeionadmin/art/Feather-On-a-Stick-1178229970", weight: 15 },
