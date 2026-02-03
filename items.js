@@ -995,7 +995,8 @@ const itemLists = {
         { name: "Sailing Seas Background", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Sailing-Seas-1047716790", weight: 2 },
         { name: "Fields of Love Background", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Fields-of-Love-1154191432", weight: 2 },
         { name: "Festival Grounds Background", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Festival-Grounds-1178244929", weight: 2 },
-        { name: "Summer Waves Background", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Summer-Waves-1201268056", weight: 2 }
+        { name: "Summer Waves Background", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-Summer-Waves-1201268056", weight: 2 },
+        { name: "The Favored Gladiator Background", link: "https://www.deviantart.com/nemeionadmin/art/Import-Background-The-Favored-Gladiator-1282048944", weight: 2 }
     ],
     lostmissivepouch: [
         { name: "Missive", link: "https://www.deviantart.com/nemeionadmin/art/Missive-990301175", weight: 1 },
