@@ -362,6 +362,10 @@ function rollItem() {
     const rolledItems = Object.entries(itemCounts)
         .map(([name, count]) => {
             const item = rolledResults.find(i => i.name === name);
+            // Special case: Don't show x1 for 5,000 Coins from Imperial Champion Cache
+            if (selectedCategory === 'imperialchampioncache' && name === '5,000 Coins' && count === 1) {
+                return `<a href="${item.link}" target="_blank">${name}</a><br>`;
+            }
             return `x${count}  &nbsp; <a href="${item.link}" target="_blank">${name}</a><br>`;
         })
         .join("");
