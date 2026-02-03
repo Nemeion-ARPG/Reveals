@@ -465,32 +465,68 @@ function toggleEggsDropdown() {
 }
 
 function resetRoller() {
-    document.getElementById('result').innerHTML = '';
-    // Reset radio button selection to the first option (backgrounds)
-    const firstRadio = document.querySelector('input[type="radio"]');
-    if (firstRadio) {
-        firstRadio.checked = true;
-        // Update the category display text
-        const label = firstRadio.parentElement.textContent.trim();
-        document.getElementById('selectedCategory').textContent = 'Currently Selected: ' + label;
-    }
-    // Hide egg subcategory
-    document.getElementById('eggsSubcategory').style.display = 'none';
-    document.getElementById('selectedEggType').style.display = 'none';
-    // Hide Imperial Champion Cache options
-    const imperialChampionOptions = document.getElementById('imperialChampionOptions');
-    if (imperialChampionOptions) {
-        imperialChampionOptions.style.display = 'none';
-    }
-    // Reset Imperial Champion Cache checkbox
-    const missingKeyCheckbox = document.getElementById('missingKeyCheckbox');
-    if (missingKeyCheckbox) {
-        missingKeyCheckbox.checked = false;
-    }
-    // Reset egg type selection
-    const firstEggType = document.querySelector('input[name="eggType"]');
-    if (firstEggType) {
-        firstEggType.checked = true;
+    // Determine which container is currently active
+    const mainContainer = document.getElementById('mainContainer');
+    const altContainer = document.getElementById('altContainer');
+    const isMainActive = !mainContainer.classList.contains('hidden');
+    
+    // Clear the result for the active container
+    if (isMainActive) {
+        const mainResult = document.getElementById('result');
+        if (mainResult) mainResult.innerHTML = '';
+        
+        // Reset main container radio button selection to the first option (backgrounds)
+        const firstRadio = mainContainer.querySelector('input[name="category"]');
+        if (firstRadio) {
+            firstRadio.checked = true;
+            const label = firstRadio.parentElement.textContent.trim();
+            const selectedCategoryElement = document.getElementById('selectedCategory');
+            if (selectedCategoryElement) {
+                selectedCategoryElement.textContent = 'Currently Selected: ' + label;
+            }
+        }
+        
+        // Hide main container specific elements
+        const eggsSubcategory = document.getElementById('eggsSubcategory');
+        const selectedEggType = document.getElementById('selectedEggType');
+        const imperialChampionOptions = document.getElementById('imperialChampionOptions');
+        
+        if (eggsSubcategory) eggsSubcategory.style.display = 'none';
+        if (selectedEggType) selectedEggType.style.display = 'none';
+        if (imperialChampionOptions) imperialChampionOptions.style.display = 'none';
+        
+        // Reset Imperial Champion Cache checkbox
+        const missingKeyCheckbox = document.getElementById('missingKeyCheckbox');
+        if (missingKeyCheckbox) {
+            missingKeyCheckbox.checked = false;
+        }
+        
+        // Reset egg type selection
+        const firstEggType = document.querySelector('input[name="eggType"]');
+        if (firstEggType) {
+            firstEggType.checked = true;
+        }
+    } else {
+        // Reset alt container
+        const altResult = document.getElementById('altResult');
+        if (altResult) altResult.innerHTML = '';
+        
+        // Reset alt container radio button selection
+        const firstAltRadio = altContainer.querySelector('input[name="altCategory"]');
+        if (firstAltRadio) {
+            firstAltRadio.checked = true;
+            const label = firstAltRadio.parentElement.textContent.trim();
+            const altSelectedCategoryElement = document.getElementById('altSelectedCategory');
+            if (altSelectedCategoryElement) {
+                altSelectedCategoryElement.textContent = 'Currently Selected: ' + label;
+            }
+        }
+        
+        // Reset potion description for alt container
+        const potionDescription = document.getElementById('potionDescription');
+        if (potionDescription) {
+            potionDescription.value = '';
+        }
     }
 }
 
