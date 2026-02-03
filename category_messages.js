@@ -30,7 +30,7 @@ const categoryMessages = {
         { text: "The crate opens with a metallic groan, revealing stacks of forged bars and rivets gleaming in the half-light. They carry the promise of creation — the bones of armor, the heart of machines, the veins of a thousand yet-to-be-made relics. Your x1 Metal Supplies has revealed the following:", weight: 5 },
     ],
     mysterycrate: [
-        { text: "The crate groans as you pry it open, the hinges shrieking like something alive. A chill seeps out, curling through the air like the breath of the dead. Within, the trinkets glimmer faintly—masks that leer, lanterns that flicker with trapped souls, and a faint music box tune that shouldn’t still be playing. The melody halts as you reach inside, leaving behind only silence… and the feeling that something unseen has just stepped closer. Your x1 Mysterious Crate has revealed the following:", weight: 5 },
+        { text: "The chest groans as you pry it open, the hinges shrieking like something alive. A chill seeps out, curling through the air like the breath of the dead. Within, the trinkets glimmer faintly—masks that leer, lanterns that flicker with trapped souls, and a faint music box tune that shouldn’t still be playing. The melody halts as you reach inside, leaving behind only silence… and the feeling that something unseen has just stepped closer. Your x1 Mysterious Chest has revealed the following:", weight: 5 },
     ],
     mysterypotion: [
         { text: "Guess what? Chicken butt.", weight: 5 },
@@ -79,5 +79,20 @@ const categoryMessages = {
     ],
     largesackofcoins: [
         { text: "The substantial weight of the large leather sack speaks of its contents before you even open it. As you loosen the thick rope binding it shut, the unmistakable gleam of coins catches your eye. Your Large Sack of Coins reveals:", weight: 1 }
+    ],
+    backgroundcache: [
+        { text: "The background cache opens to reveal a single unlocked, exclusive background. A new scene, now yours to use. Your x1 Background Cache has revealed the following:", weight: 1 }
+    ],
+    lostmissivepouch: [
+        { text: "The pouch opens to reveal a collection of missive papers, creased from travel but still legible. Whatever their original destination, they have found a new owner now. Your x1 Lost Missive Pouch has revealed the following:", weight: 1 }
+    ],
+    eventrewardcache: [
+        { text: "The event reward cache opens, revealing a carefully selected prize within. Small in size yet notable in value, it stands as a clear mark of effort well spent. You have earned it! Your x1 Event Reward Cache has revealed the following:", weight: 1 }
+    ],
+    valentinebox: [
+        { text: "With a gentle lift of the lid, the Valentine box unveils its treasure. Plush fabrics cradle a small but striking prize, presented as though meant for only one. Every detail speaks of admiration and intent, a reward worthy of devotion and victory alike. Your x1 Valentine Box has revealed the following:", weight: 1 }
+    ],
+    imperialchampioncache: [
+        { text: "The ornately carved wooden box clicks open softly as you insert its gilded key. A small box with a small but impressive offering, its treasure sits on a pillow of beautifully decorated fabrics. Truly a gift fit for a champion. Your x1 Imperial Champion Cache has revealed the following:", weight: 1 }
     ]
 };

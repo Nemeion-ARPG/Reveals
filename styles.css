@@ -12,12 +12,15 @@ body {
     box-sizing: border-box;
 }
 .container {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ccc;
+    border-radius: 5px;
     padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
     width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    min-height: 500px;
     font-size: 12px;
 }
 
@@ -25,46 +28,67 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 10px;
-    width: 100%;
+    margin-bottom: 20px;
 }
 
 .version-button {
-    padding: 8px 16px;
-    font-size: 16px;
-    cursor: pointer;
+    background: #e0e0e0;
+    color: #333;
     border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    min-width: 140px;
     border-radius: 4px;
-    background-color: #f0f0f0;
-    transition: all 0.2s;
     margin: 0;
-}
-
-.version-button.active {
-    background-color: #6e4021;
-    color: white;
-    border-color: #ffffff;
+    transition: background-color 0.2s ease;
 }
 
 .version-button:hover {
-    background-color: #e0e0e0;
+    background: #d0d0d0;
+}
+
+.version-button.active {
+    background: #007cba;
+    color: white;
+    border-color: #005a8b;
 }
 
 .version-button.active:hover {
-    background-color: #814b27;
+    background: #005a8b;
 }
+
+.container.hidden {
+    display: none;
+}
+
 #result {
-    font-size: 12px;
-    margin-top: 30px;
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     min-height: 50px;
-    align-content: center;
     text-align: center;
 }
 button {
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 12px 24px;
+    font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.button-group button {
+    background: #007cba;
+    color: white;
+    border: 1px solid #005a8b;
+}
+
+.button-group button:hover {
+    background: #005a8b;
 }
 .button-group {
     display: flex;
@@ -79,15 +103,27 @@ button {
   position: relative;
   display: inline-block;
   margin-bottom: 20px;
+  width: 250px;
 }
 
 .dropdown-toggle {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  background-color: #eee;
+  background-color: white;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+  width: 100%;
+}
+
+.dropdown-toggle:hover {
+  border-color: #007cba;
+}
+
+.dropdown-toggle:focus {
+  outline: none;
+  border-color: #007cba;
 }
 
 .dropdown-menu {
@@ -95,15 +131,15 @@ button {
   position: absolute;
   top: 100%;
   left: 0;
-  max-height: 200px;
+  right: 0;
+  max-height: 300px;
   overflow-y: auto;
   background-color: white;
   border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   z-index: 1000;
   padding: 10px;
-  border-radius: 5px;
-  width: 220px;
+  border-radius: 4px;
 }
 
 .dropdown-menu label {
@@ -147,16 +183,18 @@ button {
 }
 
 .copy-button {
+  background: #6c757d;
+  color: white;
+  border: 1px solid #5a6268;
   padding: 8px 16px;
   font-size: 14px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   cursor: pointer;
+  border-radius: 4px;
   margin-top: 15px;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s ease;
 }
 
 .copy-button:hover {
-  background-color: #e0e0e0;
+  background: #5a6268;
 }
+

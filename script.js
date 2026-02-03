@@ -62,8 +62,9 @@ class RandomItemRoller {
     // Add egg type categories to guaranteedOne
     const eggTypes = ["curious", "spotted", "hefty", "peculiar", "strange", "unusual", "quivering", "frogspawn"];
     const guaranteedFive = ["shipment", "breeding", "decor", "backgrounds"].includes(lowerCategory);
-    const guaranteedOne = ["mysterycrate", "foolsmask", "legendarycompanioncache"].includes(lowerCategory) || eggTypes.includes(lowerCategory);
-    const oneTwoItems = ["present", "naughtypresent", "elegantpresent"].includes(lowerCategory);
+    const guaranteedOne = ["mysterycrate", "foolsmask", "legendarycompanioncache", "imperialchampioncache", "backgroundcache"].includes(lowerCategory) || eggTypes.includes(lowerCategory);
+    const oneTwoItems = ["present", "naughtypresent", "elegantpresent", "valentinebox"].includes(lowerCategory);
+    const twoToThree = ["lostmissivepouch", "eventrewardcache"].includes(lowerCategory);
     const threeToFiveItems = ["decorationcoffer", "largeingredient"].includes(lowerCategory);
     const oneToFifteen = ["teethbag"].includes(lowerCategory);
     const oneToThree = ["scrolls", "trunk", "bountifulharvest", "bagofgags", "supplycrate", "pouchofherbs", "sunkenchest", "treasurechest", "metalsupplies", "smallingredient"].includes(lowerCategory);
@@ -100,16 +101,26 @@ class RandomItemRoller {
     const itemCount = guaranteedFive ? 5 : 
         (guaranteedOne ? 1 : 
         (oneTwoItems ? Math.floor(Math.random() * 2) + 1 : 
+        (twoToThree ? Math.floor(Math.random() * 2) + 2 :
         (threeToFiveItems ? Math.floor(Math.random() * 3) + 3 :
         (oneToFifteen ? Math.floor(Math.random() * 15) + 1 :
         (oneToThree ? Math.floor(Math.random() * 3) + 1 :
         (twoToFive ? Math.floor(Math.random() * 4) + 2 :
-        Math.floor(Math.random() * 3) + 1))))));
+        Math.floor(Math.random() * 3) + 1)))))));
     
     const results = [];
     for (let i = 0; i < itemCount; i++) {
         const randomIndex = Math.floor(Math.random() * weightedItems.length);
-        results.push(weightedItems[randomIndex]);
+        let selectedItem = weightedItems[randomIndex];
+        
+        // Special handling for Imperial Champion Cache
+        if (lowerCategory === "imperialchampioncache" && 
+            (selectedItem.name === "Scales" || selectedItem.name === "Medal of Honor")) {
+            // Force quantity to 5 for these specific items
+            selectedItem = { ...selectedItem, quantity: 5 };
+        }
+        
+        results.push(selectedItem);
     }
     return results;
     }
@@ -168,13 +179,52 @@ function getGagMessage() {
     return messages[Math.floor(Math.random() * messages.length)];
 }
 
+// Helper function to get the current active container
+function getCurrentContainer() {
+    const mainContainer = document.getElementById('mainContainer');
+    const altContainer = document.getElementById('altContainer');
+    
+    if (!mainContainer.classList.contains('hidden')) {
+        return mainContainer;
+    } else {
+        return altContainer;
+    }
+}
+
+// Helper function to get element within current container
+function getCurrentElement(selector) {
+    const container = getCurrentContainer();
+    return container.querySelector(selector);
+}
+
 function rollItem() {
-    const selectedCategory = document.querySelector('input[name="category"]:checked').value;
+    // Get the currently visible container
+    const mainContainer = document.getElementById('mainContainer');
+    const altContainer = document.getElementById('altContainer');
+    const isMainActive = !mainContainer.classList.contains('hidden');
+    const currentContainer = isMainActive ? mainContainer : altContainer;
+    
+    // Get selected category from the visible container only
+    const radioName = isMainActive ? 'category' : 'altCategory';
+    const selectedCategory = currentContainer.querySelector(`input[name="${radioName}"]:checked`).value;
+    const resultElement = isMainActive ? document.getElementById('result') : document.getElementById('altResult');
     
     // Handle Mysterious Potion in the events roller
     if (selectedCategory === 'mysteriouspotion') {
-        document.getElementById("result").innerHTML = handleMysteriousPotion();
+        resultElement.innerHTML = handleMysteriousPotion();
         return;
+    }
+    
+    // Handle Imperial Champion Cache with Missing Key checkbox
+    if (selectedCategory === 'imperialchampioncache') {
+        const missingKeyCheckbox = currentContainer.querySelector('#missingKeyCheckbox');
+        if (missingKeyCheckbox && missingKeyCheckbox.checked) {
+            resultElement.innerHTML = `
+                <p><i>Pry as you might, the ornate box is sealed tightly, you likely need a key to open this.</i></p>
+                <button onclick="copyResults()" class="copy-button">Copy Results</button>
+            `;
+            return;
+        }
     }
     
     let itemList = itemLists[selectedCategory];
@@ -207,7 +257,7 @@ function rollItem() {
                 `x1  &nbsp; <a href="${item.link}" target="_blank">${item.name}</a><br>`
             ).join("");
 
-            document.getElementById("result").innerHTML = `
+            resultElement.innerHTML = `
                 <p><i>${message}</i></p>
                 <br>
                 ${rolledItems}
@@ -225,7 +275,7 @@ function rollItem() {
         // Check if mask works (40% chance)
         if (!tryHatchEgg()) { // reusing the same 40% chance function
             // Mask didn't work
-            document.getElementById("result").innerHTML = `
+            resultElement.innerHTML = `
                 ${getFailedMaskMessage()}<br>
                 <p><strong>The mask has been removed from your vault.</strong></p>
                 <button onclick="copyResults()" class="copy-button">Copy Results</button>
@@ -241,7 +291,7 @@ function rollItem() {
         // Check if egg hatches (40% chance)
         if (!tryHatchEgg()) {
             // Egg didn't hatch
-            document.getElementById("result").innerHTML = `
+            resultElement.innerHTML = `
                 <p><i>You attempt to hatch the egg, but...</i></p>
                 <br>
                 ${getUnhatchedEggMessage(selectedEggType)}<br>
@@ -316,12 +366,16 @@ function rollItem() {
         })
         .join("");
     
-    document.getElementById("result").innerHTML = `
+    resultElement.innerHTML = `
         <p><i>${message}</i></p>
         <br>
         ${rolledItems}<p><strong>All items have been added to your vault!</strong></p>
         <button onclick="copyResults()" class="copy-button">Copy Results</button>
     `;
+}
+
+function toggleAltDropdown() {
+    document.getElementById('altDropdownMenu').parentElement.classList.toggle('show');
 }
 
 function toggleDropdown() {
@@ -347,24 +401,49 @@ function toggleDropdown() {
 document.querySelectorAll('input[name="category"]').forEach(radio => {
     radio.addEventListener('change', function() {
         const label = this.parentElement.textContent.trim();
-        document.getElementById('selectedCategory').textContent = 'Currently Selected: ' + label;
+        const selectedCategoryElement = document.getElementById('selectedCategory');
+        if (selectedCategoryElement) {
+            selectedCategoryElement.textContent = 'Currently Selected: ' + label;
+        }
         
-        // Show/hide egg subcategory based on selection
+        // Get elements with null checks
         const eggsSubcategory = document.getElementById('eggsSubcategory');
         const selectedEggType = document.getElementById('selectedEggType');
         const potionDescriptionContainer = document.getElementById('potionDescriptionContainer');
+        const imperialChampionOptions = document.getElementById('imperialChampionOptions');
         
+        // Hide all optional elements first
+        if (eggsSubcategory) eggsSubcategory.style.display = 'none';
+        if (selectedEggType) selectedEggType.style.display = 'none';
+        if (potionDescriptionContainer) potionDescriptionContainer.style.display = 'none';
+        if (imperialChampionOptions) imperialChampionOptions.style.display = 'none';
+        
+        // Show specific elements based on selection
         if (this.value === 'eggs') {
-            eggsSubcategory.style.display = 'inline-block';
-            selectedEggType.style.display = 'block';
-            potionDescriptionContainer.style.display = 'none';
+            if (eggsSubcategory) eggsSubcategory.style.display = 'inline-block';
+            if (selectedEggType) selectedEggType.style.display = 'block';
         } else if (this.value === 'mysteriouspotion') {
-            eggsSubcategory.style.display = 'none';
-            selectedEggType.style.display = 'none';
+            if (potionDescriptionContainer) potionDescriptionContainer.style.display = 'block';
+        } else if (this.value === 'imperialchampioncache') {
+            if (imperialChampionOptions) {
+                imperialChampionOptions.style.display = 'block';
+                console.log('Imperial Champion Cache selected, showing checkbox');
+            }
+        }
+    });
+});
+
+// Update category display for alt container
+document.querySelectorAll('input[name="altCategory"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+        const label = this.parentElement.textContent.trim();
+        document.getElementById('altSelectedCategory').textContent = 'Currently Selected: ' + label;
+        
+        // Handle potion description container for alt tab
+        const potionDescriptionContainer = document.getElementById('potionDescriptionContainer');
+        if (this.value === 'mysteriouspotion') {
             potionDescriptionContainer.style.display = 'block';
         } else {
-            eggsSubcategory.style.display = 'none';
-            selectedEggType.style.display = 'none';
             potionDescriptionContainer.style.display = 'none';
         }
     });
@@ -398,6 +477,16 @@ function resetRoller() {
     // Hide egg subcategory
     document.getElementById('eggsSubcategory').style.display = 'none';
     document.getElementById('selectedEggType').style.display = 'none';
+    // Hide Imperial Champion Cache options
+    const imperialChampionOptions = document.getElementById('imperialChampionOptions');
+    if (imperialChampionOptions) {
+        imperialChampionOptions.style.display = 'none';
+    }
+    // Reset Imperial Champion Cache checkbox
+    const missingKeyCheckbox = document.getElementById('missingKeyCheckbox');
+    if (missingKeyCheckbox) {
+        missingKeyCheckbox.checked = false;
+    }
     // Reset egg type selection
     const firstEggType = document.querySelector('input[name="eggType"]');
     if (firstEggType) {
@@ -406,7 +495,10 @@ function resetRoller() {
 }
 
 function copyResults() {
-    const resultDiv = document.getElementById("result");
+    // Determine which result container is visible
+    const mainContainer = document.getElementById('mainContainer');
+    const isMainActive = !mainContainer.classList.contains('hidden');
+    const resultDiv = isMainActive ? document.getElementById("result") : document.getElementById("altResult");
     
     // Create a temporary element for rich text selection
     const range = document.createRange();
@@ -440,30 +532,29 @@ function copyResults() {
     }
 }
 
-// Handle version switching
+// Handle version switching without transitions
 function switchVersion(version) {
-    // Get both buttons
+    // Get both buttons and containers
     const mainButton = document.getElementById('mainVersion');
     const altButton = document.getElementById('altVersion');
+    const mainContainer = document.getElementById('mainContainer');
+    const altContainer = document.getElementById('altContainer');
     
-    // Update active states
+    // Simple show/hide without animations
     if (version === 'main') {
+        mainContainer.classList.remove('hidden');
+        altContainer.classList.add('hidden');
         mainButton.classList.add('active');
         altButton.classList.remove('active');
     } else {
-        mainButton.classList.remove('active');
+        altContainer.classList.remove('hidden');
+        mainContainer.classList.add('hidden');
         altButton.classList.add('active');
+        mainButton.classList.remove('active');
     }
-
+    
     // Store the current version in localStorage
     localStorage.setItem('currentVersion', version);
-    
-    // Reload the appropriate version
-    if (version === 'alt') {
-        window.location.href = 'alt.html';
-    } else {
-        window.location.href = 'index.html';
-    }
 }
 
 // Check version and initialize page on load
@@ -471,19 +562,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentVersion = localStorage.getItem('currentVersion') || 'main';
     const mainButton = document.getElementById('mainVersion');
     const altButton = document.getElementById('altVersion');
+    const mainContainer = document.getElementById('mainContainer');
+    const altContainer = document.getElementById('altContainer');
     
+    // Initialize containers based on saved version
     if (currentVersion === 'main') {
         mainButton.classList.add('active');
         altButton.classList.remove('active');
+        mainContainer.classList.remove('hidden');
+        altContainer.classList.add('hidden');
     } else {
         mainButton.classList.remove('active');
         altButton.classList.add('active');
+        mainContainer.classList.add('hidden');
+        altContainer.classList.remove('hidden');
     }
 
     // Get the first radio button and update the selected category text
-    const firstRadio = document.querySelector('input[type="radio"]');
+    const firstRadio = document.querySelector('input[type="radio"]:not([disabled])');
     if (firstRadio) {
         const label = firstRadio.parentElement.textContent.trim();
-        document.getElementById('selectedCategory').textContent = 'Currently Selected: ' + label;
+        const selectedCategoryElement = document.querySelector(`#${currentVersion}Container #selectedCategory`);
+        if (selectedCategoryElement) {
+            selectedCategoryElement.textContent = 'Currently Selected: ' + label;
+        }
     }
 });

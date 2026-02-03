@@ -7,47 +7,64 @@
     <link rel="stylesheet" href="styles.css">
     <script defer src="items.js"></script>
     <script defer src="category_messages.js"></script>
+    <script defer src="feral_options.js"></script>
+    <script defer src="mysterious_potion.js"></script>
+    <script defer src="events.js"></script>
     <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="version-switcher">
-        <button id="mainVersion" class="version-button active" onclick="switchVersion('main')">Reveals Roller</button>
-        <button id="altVersion" class="version-button" onclick="switchVersion('alt')">Special Events Roller</button>
-    </div>
-    <div class="container">
-    <h1>Reveals Roller</h1>
-    <div id="selectedCategory">Currently Selected: Backgrounds</div>
-    <div class="dropdown">
-        <button class="dropdown-toggle" onclick="toggleDropdown()">Category Selection</button>
-        <div class="dropdown-menu" id="dropdownMenu">
-            <label><input type="radio" name="category" value="backgrounds" checked> Backgrounds</label>
-            <label><input type="radio" name="category" value="bagofgags"> Bag of Gags</label>
-            <label><input type="radio" name="category" value="teethbag"> Bag of Teeth</label>
-            <label><input type="radio" name="category" value="bountifulharvest"> Bountiful Harvest</label>
-            <label><input type="radio" name="category" value="breeding"> Breeding</label>
-            <label><input type="radio" name="category" value="decor"> Decor</label>
-            <label><input type="radio" name="category" value="decorationcoffer"> Decoration Coffer</label>
-            <label><input type="radio" name="category" value="eggs"> Eggs</label>
-            <label><input type="radio" name="category" value="foolsmask"> Fool's Mask</label>
-            <label><input type="radio" name="category" value="present"> Festive Present</label>
-            <label><input type="radio" name="category" value="naughtypresent"> Naughty Present</label>
-            <label><input type="radio" name="category" value="elegantpresent"> Elegant Present</label>
-            <label><input type="radio" name="category" value="smallingredient"> Small Ingredient Box</label>
-            <label><input type="radio" name="category" value="largeingredient"> Large Ingredient Box</label>
-            <label><input type="radio" name="category" value="legendarycompanioncache"> Legendary Companion Cache</label>
-            <label><input type="radio" name="category" value="map"> Map</label>
-            <label><input type="radio" name="category" value="metalsupplies"> Metal Supplies</label>
-            <label><input type="radio" name="category" value="mysterycrate"> Mysterious Chest</label>
-            <label><input type="radio" name="category" value="smallsackofcoins"> Small Sack of Coins</label>
-            <label><input type="radio" name="category" value="largesackofcoins"> Large Sack of Coins</label>
-            <label><input type="radio" name="category" value="pouchofherbs"> Pouch of Herbs</label>
-            <label><input type="radio" name="category" value="scrolls"> Scrolls</label>
-            <label><input type="radio" name="category" value="shipment"> Shipment</label>
-            <label><input type="radio" name="category" value="supplycrate"> Supply Crate</label>
-            <label><input type="radio" name="category" value="sunkenchest"> Sunken Treasure Chest</label>
-            <label><input type="radio" name="category" value="treasurechest"> Treasure Chest</label>
-            <label><input type="radio" name="category" value="trunk"> Wooden Trunk</label>
-        </div></div>
+    
+    <!-- Main Version Container -->
+    <div id="mainContainer" class="container">
+        <div class="version-switcher">
+            <button id="mainVersion" class="version-button active" onclick="switchVersion('main')">Reveals Roller</button>
+            <button id="altVersion" class="version-button" onclick="switchVersion('alt')">Special Events Roller</button>
+        </div>
+        <h1>Reveals Roller</h1>
+        <div id="selectedCategory">Currently Selected: Background Cache</div>
+        <div class="dropdown">
+            <button class="dropdown-toggle" onclick="toggleDropdown()">Category Selection</button>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <label><input type="radio" name="category" value="backgroundcache" checked> Background Cache</label>
+                <label><input type="radio" name="category" value="bagofgags"> Bag of Gags</label>
+                <label><input type="radio" name="category" value="teethbag"> Bag of Teeth</label>
+                <label><input type="radio" name="category" value="bountifulharvest"> Bountiful Harvest</label>
+                <label><input type="radio" name="category" value="decorationcoffer"> Decoration Coffer</label>
+                <label><input type="radio" name="category" value="eggs"> Eggs</label>
+                <label><input type="radio" name="category" value="eventrewardcache"> Event Reward Cache</label>
+                <label><input type="radio" name="category" value="foolsmask"> Fool's Mask</label>
+                <label><input type="radio" name="category" value="present"> Festive Present</label>
+                <label><input type="radio" name="category" value="imperialchampioncache"> Imperial Champion Cache</label>
+                <label><input type="radio" name="category" value="naughtypresent"> Naughty Present</label>
+                <label><input type="radio" name="category" value="elegantpresent"> Elegant Present</label>
+                <label><input type="radio" name="category" value="smallingredient"> Small Ingredient Box</label>
+                <label><input type="radio" name="category" value="largeingredient"> Large Ingredient Box</label>
+                <label><input type="radio" name="category" value="legendarycompanioncache"> Legendary Companion Cache</label>
+                <label><input type="radio" name="category" value="lostmissivepouch"> Lost Missive Pouch</label>
+                <label><input type="radio" name="category" value="map"> Map</label>
+                <label><input type="radio" name="category" value="metalsupplies"> Metal Supplies</label>
+                <label><input type="radio" name="category" value="mysterycrate"> Mysterious Chest</label>
+                <label><input type="radio" name="category" value="smallsackofcoins"> Small Sack of Coins</label>
+                <label><input type="radio" name="category" value="largesackofcoins"> Large Sack of Coins</label>
+                <label><input type="radio" name="category" value="pouchofherbs"> Pouch of Herbs</label>
+                <label><input type="radio" name="category" value="scrolls"> Scrolls</label>
+                <label><input type="radio" name="category" value="shipment"> Shipment</label>
+                <label><input type="radio" name="category" value="supplycrate"> Supply Crate</label>
+                <label><input type="radio" name="category" value="sunkenchest"> Sunken Treasure Chest</label>
+                <label><input type="radio" name="category" value="treasurechest"> Treasure Chest</label>
+                <label><input type="radio" name="category" value="trunk"> Wooden Trunk</label>
+                <label><input type="radio" name="category" value="valentinebox"> Valentine Box</label>
+            </div>
+        </div>
+        
+        <!-- Checkbox for Imperial Champion Cache -->
+        <div id="imperialChampionOptions" style="display: none; margin: 15px 0; text-align: center;">
+            <div style="background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px; padding: 10px; display: inline-block;">
+                <label style="display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; font-size: 14px;">
+                    <input type="checkbox" id="missingKeyCheckbox" style="margin: 0;"> Missing Key
+                </label>
+            </div>
+        </div>
         
         <!-- Secondary dropdown for Eggs category -->
         <div id="eggsSubcategory" class="dropdown" style="display: none;">
@@ -70,6 +87,31 @@
         </div>
         <div id="result"></div>
     </div>
+    
+    <!-- Alt Version Container -->
+    <div id="altContainer" class="container hidden">
+        <div class="version-switcher">
+            <button id="mainVersion" class="version-button" onclick="switchVersion('main')">Reveals Roller</button>
+            <button id="altVersion" class="version-button active" onclick="switchVersion('alt')">Special Events Roller</button>
+        </div>
+        <h1>Special Events Roller</h1>
+        <div id="altSelectedCategory">Currently Selected: Mysterious Potion</div>
+        <div class="dropdown">
+            <button class="dropdown-toggle" onclick="toggleAltDropdown()">Category Selection</button>
+            <div class="dropdown-menu" id="altDropdownMenu">
+                <label><input type="radio" name="altCategory" value="mysteriouspotion" checked> Mysterious Potion</label>
+            </div>
+        </div>
+        
+        <div id="potionDescriptionContainer" style="margin: 10px 0;">
+            <input type="text" id="potionDescription" placeholder="Enter Nemeion Name and ID" style="width: 100%; padding: 8px; margin: 5px 0;">
+        </div>
+        
+        <div class="button-group">
+            <button onclick="rollItem()">Roll Results</button>
+            <button onclick="resetRoller()">Reset</button>
+        </div>
+        <div id="altResult"></div>
     </div>
 </body>
 </html>
